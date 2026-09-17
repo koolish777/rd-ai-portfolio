@@ -2,3 +2,26 @@ __pycache__/
 *.pyc
 .DS_Store
 Thumbs.db
+
+# Local environment and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa*
+id_ed25519*
+credentials.json
+service-account*.json
+.aws/
+.azure/
+
+# Local editor settings and generated reports
+.vscode/
+.idea/
+*.code-workspace
+*.log
+playwright-report/
+test-results/

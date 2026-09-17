@@ -1,268 +1,47 @@
-<!doctype html>
-<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>研究開発・AIシステム設計 | 個人ポートフォリオ</title><meta name="description" content="装置制御、試験データ解析、AIを用いた開発を組み合わせ、研究開発と業務改善を支援します。システム構成、実行権限、停止条件、監視画面、3Dモデル・構造図を、低温通電試験の例題で示します。"><meta name="theme-color" content="#123a3d"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23123a3d'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-size='30' fill='white' font-family='Arial'%3ERD%3C/text%3E%3C/svg%3E"><link rel="preload" href="assets/NotoSansJP.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="onepage.css"><script src="assets/monitor-data.js" defer></script><script src="onepage.js" defer></script><link rel="canonical" href="https://koolish777.github.io/rd-ai-portfolio/"><meta property="og:type" content="website"><meta property="og:locale" content="ja_JP"><meta property="og:title" content="研究開発・AIシステム設計 | 個人ポートフォリオ"><meta property="og:description" content="装置制御、試験データ解析、AI処理基盤、監視画面、3Dモデル・図面を紹介する個人ポートフォリオ。"><meta property="og:url" content="https://koolish777.github.io/rd-ai-portfolio/"><meta property="og:image" content="https://koolish777.github.io/rd-ai-portfolio/assets/researcher-cleanroom.png"><meta name="twitter:card" content="summary_large_image"></head>
-<body id="top"><a class="skip" href="#main">本文へ移動</a>
-<header class="header"><div class="header-inner"><a class="brand" href="#top" aria-label="研究開発・AIシステム設計 ページの先頭へ">研究開発・AIシステム設計<span>個人ポートフォリオ</span></a><button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">メニューを開く <span aria-hidden="true">☰</span></button><nav id="main-nav" aria-label="ページ内メニュー"><a href="#architecture">システム構成</a><a href="#keys">実行権限</a><a href="#rules">停止条件</a><a href="#dashboard">監視画面</a><a href="#example">試験事例</a><a href="#design">3Dモデル・構造図</a><a href="#workload">作業時間・費用</a><a href="#enterprise">データ管理</a><a class="nav-action" href="#monitor">モニターを操作する <span aria-hidden="true">↓</span></a></nav></div></header>
-<main id="main">
+<!DOCTYPE html>
 
+<html lang="ja"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>研究開発・AIシステム設計 | 個人ポートフォリオ</title><meta content="試験データ解析、PLC制御・自動化、監視画面、3Dモデル・図面。低温通電試験を例に、AIを使って研究開発と業務改善に取り組める内容を紹介します。" name="description"/><meta content="#123a3d" name="theme-color"/><link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23123a3d'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-size='30' fill='white' font-family='Arial'%3ERD%3C/text%3E%3C/svg%3E" rel="icon"/><link as="font" crossorigin="" href="assets/NotoSansJP.woff2" rel="preload" type="font/woff2"/><link href="onepage.css" rel="stylesheet"/><script defer="" src="assets/monitor-data.js"></script><script defer="" src="onepage.js"></script><link href="https://koolish777.github.io/rd-ai-portfolio/" rel="canonical"/><meta content="website" property="og:type"/><meta content="ja_JP" property="og:locale"/><meta content="研究開発・AIシステム設計 | 個人ポートフォリオ" property="og:title"/><meta content="試験データを読み、装置を動かし、結果を画面で共有する。AIを組み合わせた研究開発・業務改善の技術紹介。" property="og:description"/><meta content="https://koolish777.github.io/rd-ai-portfolio/" property="og:url"/><meta content="https://koolish777.github.io/rd-ai-portfolio/assets/researcher-cleanroom.png" property="og:image"/><meta content="summary_large_image" name="twitter:card"/></head>
+<body id="top"><a class="skip" href="#main">本文へ移動</a>
+<header class="header"><div class="header-inner"><a aria-label="研究開発・AIシステム設計 ページの先頭へ" class="brand" href="#top">研究開発・AIシステム設計<span>個人ポートフォリオ</span></a><button aria-controls="main-nav" aria-expanded="false" class="menu-toggle">メニューを開く <span aria-hidden="true">☰</span></button><nav aria-label="ページ内メニュー" id="main-nav"><a href="#approach">できること</a><a href="#example">試験データ解析</a><a href="#architecture">AIの活用</a><a href="#design">3D・図面</a><a href="#workload">費用の例</a><a href="#enterprise">企業データ</a><a class="nav-action" href="#dashboard">試験の一覧を見る <span aria-hidden="true">↓</span></a></nav></div></header>
+<main id="main">
 <section class="hero">
 <div class="wrap hero-grid">
-<div class="hero-copy"><p class="eyebrow"><span class="dot"></span> PERSONAL PORTFOLIO / R&amp;D</p><h1>研究開発・<br><em>AIシステム設計</em></h1><p class="hero-lead">装置制御、試験データ解析、AIを用いた開発を組み合わせ、<br>研究開発と業務改善を支援します。</p><p class="hero-person">担当領域：制御設計、データ処理、試験の自動化、<br class="desktop-br">解析結果の可視化、装置の3Dモデル・図面</p>
-<div class="actions"><a class="button primary" href="#architecture">システム構成を見る <span aria-hidden="true">↓</span></a><a class="button quiet" href="#example">試験事例を開く <span aria-hidden="true">↓</span></a></div>
+<div class="hero-copy"><p class="eyebrow"><span class="dot"></span> PERSONAL PORTFOLIO / R&amp;D</p><h1>研究開発・<br/><em>AIシステム設計</em></h1><p class="hero-lead">装置制御とデータ解析を、AIでつなぐ。<br/>集計・比較・報告を自動化し、<br/>次の実験を考える時間を増やします。</p>
+<div class="actions"><a class="button primary" href="#approach">できることを見る <span aria-hidden="true">↓</span></a><a class="button quiet" href="#monitor">試験モニターを操作する <span aria-hidden="true">↓</span></a></div>
 </div>
-<figure class="hero-visual"><img src="assets/researcher-cleanroom.png" alt="クリーンスーツを着た研究者が、モニターの温度と電圧波形を確認しながら試験装置を調整している画像" fetchpriority="high">
-<div class="photo-label"><span>複数の試験装置を1つの画面で監視する研究環境</span><small>RESEARCH IN MOTION</small></div>
+<figure class="hero-visual"><img alt="クリーンスーツを着た研究者が、モニターの温度と電圧波形を確認しながら試験装置を調整している画像" fetchpriority="high" src="assets/researcher-cleanroom.png"/>
+<div class="photo-label"><span>波形を読み、装置を調整し、次の試験へ。</span><small>RESEARCH IN MOTION</small></div>
 <figcaption>研究現場のイメージ（AI生成画像）</figcaption></figure>
 </div>
-<div class="wrap hero-bottom"><span>掲載する装置とデータは公開用に設計した例題です。依頼先の装置とデータに合わせて設計します。</span>
-<div><span>AI処理基盤の設計</span><span>実行権限・停止条件</span><span>監視画面</span><span>3Dモデル・図面</span></div>
-</div>
+<div class="wrap hero-bottom"><span>計測から解析、画面、3D設計まで。</span><div><span>試験データ解析</span><span>装置制御・自動化</span><span>監視画面</span><span>3D・図面</span></div></div>
 </section>
-
 <section class="section" id="approach">
 <div class="wrap">
 <div class="section-heading">
 <div><p class="eyebrow">01 / SCOPE</p>
-<h2>対応領域</h2></div>
-<p>依頼できる作業と成果物です。<br class="desktop-br">低温通電試験の例題で、各項目の実装内容を示します。</p></div>
+<h2>研究現場の、こんな仕事に。</h2></div>
+<p>データを集める、変化を見つける、次の条件を比べる。<br class="desktop-br"/>装置とソフトをつなぎ、日々の試験を進めやすくします。</p></div>
 <div class="capabilities">
-<a class="capability" href="#architecture"><span class="cap-number">01 <span aria-hidden="true">↘</span></span><svg viewBox="0 0 64 52" aria-hidden="true"><rect x="24" y="3" width="16" height="12" rx="2"/><path d="M32 15v12M12 36V27h40v9M32 27v9"/><rect x="4" y="36" width="16" height="12" rx="2"/><rect x="24" y="36" width="16" height="12" rx="2"/><rect x="44" y="36" width="16" height="12" rx="2"/></svg>
-<h3>AI処理基盤の設計</h3><p>実行管理、解析、照合の処理を分け、処理の間で渡すデータの項目を定めます。成果物は構成図、データ定義、実行スクリプトです。</p><span class="card-link">システム構成へ <span aria-hidden="true">↓</span></span></a>
-<a class="capability" href="#keys"><span class="cap-number">02 <span aria-hidden="true">↘</span></span><svg viewBox="0 0 64 52" aria-hidden="true"><circle cx="20" cy="26" r="11"/><circle cx="20" cy="26" r="3"/><path d="M31 26h28M50 26v9M58 26v7"/></svg>
-<h3>実行権限・停止条件</h3><p>試験担当者が実行権限を発行し、処理ごとの再計算回数と停止条件を設定します。成果物は権限の記録台帳と条件表です。</p><span class="card-link">実行権限へ <span aria-hidden="true">↓</span></span></a>
-<a class="capability" href="#dashboard"><span class="cap-number">03 <span aria-hidden="true">↘</span></span><svg viewBox="0 0 64 52" aria-hidden="true"><rect x="5" y="4" width="54" height="34" rx="3"/><path d="M24 48h16M32 38v10"/><circle cx="18" cy="21" r="5"/><circle cx="32" cy="21" r="5"/><circle cx="46" cy="21" r="5"/></svg>
-<h3>監視画面</h3><p>各処理の状態を緑・黄・赤で表示し、停止時に再実行、点検、設定の組み直しを選べる画面を作ります。成果物は監視画面と自動点検処理です。</p><span class="card-link">監視画面へ <span aria-hidden="true">↓</span></span></a>
-<a class="capability" href="#design"><span class="cap-number">04 <span aria-hidden="true">↘</span></span><svg viewBox="0 0 64 52" aria-hidden="true"><path d="M32 3L7 16v25l25 9 25-9V16L32 3ZM7 16l25 12 25-12M32 28v22M19 10l25 12v24"/></svg>
-<h3>3Dモデル・構造図</h3><p>装置の3Dモデル、組立図、部品図を作成します。SolidWorksでの部品、アセンブリ、図面の作成に対応します。</p><span class="card-link">3Dモデル・構造図へ <span aria-hidden="true">↓</span></span></a></div>
+<a class="capability" href="#example"><span class="cap-number">01 <span aria-hidden="true">↘</span></span><svg aria-hidden="true" viewbox="0 0 64 52"><path d="M5 4v42h54M12 32l10-13 11 8 11-18 10 6"></path><circle cx="22" cy="19" r="3"></circle><circle cx="44" cy="9" r="3"></circle></svg>
+<h3>試験データの解析</h3><p>CSVや計測ログを集計し、条件別の比較、短い異常の抽出、原因候補の整理から日次報告までつなぎます。</p><span class="card-link">波形の解析例へ <span aria-hidden="true">↓</span></span></a>
+<a class="capability" href="#control"><span class="cap-number">02 <span aria-hidden="true">↘</span></span><svg aria-hidden="true" viewbox="0 0 64 52"><rect height="30" rx="2" width="50" x="7" y="10"></rect><path d="M16 2v8M27 2v8M38 2v8M49 2v8M16 40v10M27 40v10M38 40v10M49 40v10M15 29h12v-9h11v9h11"></path></svg>
+<h3>PLC制御・自動化</h3><p>温調、通電、弁動作、計測の順序を組み、インターロックと連動する操作画面・記録処理を設計します。</p><span class="card-link">装置制御の構成へ <span aria-hidden="true">↓</span></span></a>
+<a class="capability" href="#dashboard"><span class="cap-number">03 <span aria-hidden="true">↘</span></span><svg aria-hidden="true" viewbox="0 0 64 52"><rect height="34" rx="3" width="54" x="5" y="4"></rect><path d="M24 48h16M32 38v10"></path><circle cx="18" cy="21" r="5"></circle><circle cx="32" cy="21" r="5"></circle><circle cx="46" cy="21" r="5"></circle></svg>
+<h3>監視画面・業務ツール</h3><p>試験条件、進捗、確認が必要な値を一覧に。結果の比較と報告に使える画面やデータ処理を作れます。</p><span class="card-link">試験一覧を操作する <span aria-hidden="true">↓</span></span></a>
+<a class="capability" href="#design"><span class="cap-number">04 <span aria-hidden="true">↘</span></span><svg aria-hidden="true" viewbox="0 0 64 52"><path d="M32 3L7 16v25l25 9 25-9V16L32 3ZM7 16l25 12 25-12M32 28v22M19 10l25 12v24"></path></svg>
+<h3>3Dモデル・図面</h3><p>装置の配置、内部の構成、取付寸法を立体と図面で共有。部品・アセンブリの検討につなげます。</p><span class="card-link">形と寸法を見る <span aria-hidden="true">↓</span></span></a></div>
 </div>
 </section>
-
-<section class="section architecture-section" id="architecture">
-<div class="wrap">
-<div class="section-heading">
-<div><p class="eyebrow">02 / SYSTEM</p>
-<h2>システム構成</h2></div>
-<p>実行管理が試験ごとの処理を装置に割り当て、装置ごとに解析、照合、再計算を行います。<br class="desktop-br">試験担当者は実行権限を発行し、照合済みの結果を確認して次の試験条件を選びます。</p></div>
-
-<div class="layers">
-<div class="layer human"><span class="layer-tag">担当者</span><div class="layer-box"><strong>試験担当者</strong><p>実行権限を発行します。試験の条件を決め、照合済みの結果を確認し、装置に送る設定値を承認します。</p></div></div>
-<div class="layer-link" aria-hidden="true"><span>依頼票と実行権限（1回分）</span></div>
-<div class="layer macro"><span class="layer-tag">システム全体の管理</span><div class="layer-box"><strong>実行管理 <small>AI：Fable 5.1 / GPT-6 Astra</small></strong><p>依頼を装置ごとの処理に分け、再計算の回数を数え、結果を集めて報告します。原因候補と切り分け試験の条件を一覧にします。</p></div></div>
-<div class="layer-link" aria-hidden="true"><span>作業票（原記録の保存先、計算式の版、出力形式）</span></div>
-<div class="layer micro"><span class="layer-tag">機能別の処理構成（装置ごと）</span>
-<div class="micro-grid">
-<article class="micro"><p class="device-no">装置A / 温度評価</p>
-<ol class="loop"><li><b>解析処理</b><span>AI：Sonnet 5 / GPT-5.6 Luna</span><p>試料温度とチャック温度の差、安定区間を集計します。</p></li><li><b>照合処理</b><span>AI：Opus 5 / GPT-5.6 Sol</span><p>原記録とチェックリストで集計値を照合します。</p></li><li><b>再計算</b><span>解析処理（新規の処理）</span><p>不合格の項目と根拠を受け取り、再計算します。</p></li><li><b>再照合</b><span>照合処理</span><p>同じチェックリストで再計算の結果を照合します。</p></li></ol>
-<p class="micro-out">出力：照合済みの集計値、不合格の残り、担当者が確認する項目</p></article>
-<article class="micro"><p class="device-no">装置B / 通電試験</p>
-<ol class="loop"><li><b>解析処理</b><span>AI：Sonnet 5 / GPT-5.6 Luna</span><p>波形の全点から電圧低下の区間と継続時間を抽出します。</p></li><li><b>照合処理</b><span>AI：Opus 5 / GPT-5.6 Sol</span><p>原波形と抽出結果を突き合わせます。</p></li><li><b>再計算</b><span>解析処理（新規の処理）</span><p>不合格の項目と根拠を受け取り、再計算します。</p></li><li><b>再照合</b><span>照合処理</span><p>同じチェックリストで再計算の結果を照合します。</p></li></ol>
-<p class="micro-out">出力：照合済みの集計値、不合格の残り、担当者が確認する項目</p></article>
-<article class="micro"><p class="device-no">装置C / 圧力応答</p>
-<ol class="loop"><li><b>解析処理</b><span>AI：Sonnet 5 / GPT-5.6 Luna</span><p>弁指令と圧力の応答曲線を整理します。</p></li><li><b>照合処理</b><span>AI：Opus 5 / GPT-5.6 Sol</span><p>弁指令の時刻と圧力の応答を照合します。</p></li><li><b>再計算</b><span>解析処理（新規の処理）</span><p>不合格の項目と根拠を受け取り、再計算します。</p></li><li><b>再照合</b><span>照合処理</span><p>同じチェックリストで再計算の結果を照合します。</p></li></ol>
-<p class="micro-out">出力：照合済みの集計値、不合格の残り、担当者が確認する項目</p></article>
-</div></div>
-<div class="layer-link" aria-hidden="true"><span>全処理の実行記録</span></div>
-<div class="layer watch"><span class="layer-tag">監視</span><div class="layer-box"><strong>監視画面・実行記録</strong><p>再計算回数、不合格数、実行権限の状態をランプで表示します。発行、使用、失効の時刻と処理内容を実行記録に保存します。<a href="#dashboard">監視画面へ ↓</a></p></div></div>
-</div>
-<p class="harness-note">利用モデルの例：Claude Code / Codex。装置が変わっても同じ構成で設計します。</p>
-
-<div class="insight-heading"><h3>設計方針</h3></div>
-<div class="insights"><article><span>01</span><h4>独立した照合</h4><p>解析処理とは別の照合処理が、原記録とチェックリストから集計値を確かめます。解析時の対話記録は照合処理に渡しません。</p></article>
-<article><span>02</span><h4>前工程への差し戻し</h4><p>不合格の項目、根拠の行、修正内容を記録し、再計算は前の工程から始めます。</p></article>
-<article><span>03</span><h4>解析と照合の分離</h4><p>集計する処理と確かめる処理を分け、同じ原記録を別の処理で読みます。</p></article>
-<article><span>04</span><h4>チェックリストによる照合</h4><p>試験担当者が定めた項目（測定対象、単位、原値、計算式の版）だけを照合し、チェックリストの版を記録します。</p></article>
-</div>
-</div>
-</section>
-
-<section class="section connector-section" id="connectors">
-<div class="wrap">
-<div class="section-heading">
-<div><p class="eyebrow">03 / DATA FLOW</p>
-<h2>処理間のデータ受け渡し</h2></div>
-<p>処理の間では対話記録を渡しません。<br class="desktop-br">原記録の保存先、計算式やチェックリストの版、根拠の行を渡します。</p></div>
-
-<div class="diagram-scroll"><svg class="diagram" viewBox="0 0 1100 400" role="img" aria-label="データ受け渡しの図。試験担当者から実行管理へ依頼票と実行権限、実行管理から解析処理へ作業票、解析処理から照合処理へ集計値と原記録の保存先、照合処理から実行管理へ項目ごとの合格・不合格、実行管理から再計算処理へ不合格の項目と根拠、実行管理から試験担当者へ報告。全処理の実行記録は監視画面へ。">
-<defs><marker id="arw" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5 0 10z" fill="#3a6d63"/></marker></defs>
-<g font-family="Noto,sans-serif" font-size="14" fill="#183a3d">
-<rect x="40" y="40" width="190" height="70" rx="4" fill="#e3eee7" stroke="#8fb3a6"/><text x="135" y="70" text-anchor="middle" font-weight="600" font-size="17">試験担当者</text><text x="135" y="94" text-anchor="middle" font-size="12" fill="#4f6d64">実行権限の発行・条件の承認</text>
-<rect x="455" y="40" width="190" height="70" rx="4" fill="#dbe9e3" stroke="#6f9a8c"/><text x="550" y="70" text-anchor="middle" font-weight="600" font-size="17">実行管理</text><text x="550" y="94" text-anchor="middle" font-size="12" fill="#4f6d64">処理の割当・回数の集計</text>
-<rect x="150" y="270" width="180" height="70" rx="4" fill="#fff" stroke="#8fb3a6"/><text x="240" y="300" text-anchor="middle" font-weight="600" font-size="17">解析処理</text><text x="240" y="324" text-anchor="middle" font-size="12" fill="#4f6d64">集計・報告の作成</text>
-<rect x="460" y="270" width="180" height="70" rx="4" fill="#fff" stroke="#8fb3a6"/><text x="550" y="300" text-anchor="middle" font-weight="600" font-size="17">照合処理</text><text x="550" y="324" text-anchor="middle" font-size="12" fill="#4f6d64">原記録との照合</text>
-<rect x="770" y="270" width="180" height="70" rx="4" fill="#fff" stroke="#8fb3a6"/><text x="860" y="300" text-anchor="middle" font-weight="600" font-size="17">再計算処理</text><text x="860" y="324" text-anchor="middle" font-size="12" fill="#4f6d64">新規の解析処理</text>
-<rect x="870" y="40" width="190" height="70" rx="4" fill="#173d40" stroke="#173d40"/><text x="965" y="70" text-anchor="middle" font-weight="600" font-size="17" fill="#fff">監視画面・実行記録</text><text x="965" y="94" text-anchor="middle" font-size="12" fill="#b9d6d3">ランプ表示と保存</text>
-<g stroke="#3a6d63" stroke-width="1.6" fill="none">
-<path d="M230 62H453" marker-end="url(#arw)"/>
-<path d="M453 90H232" marker-end="url(#arw)"/>
-<path d="M500 110V190H240V268" marker-end="url(#arw)"/>
-<path d="M330 305H458" marker-end="url(#arw)"/>
-<path d="M600 268V112" marker-end="url(#arw)"/>
-<path d="M640 305H768" marker-end="url(#arw)"/>
-<path d="M860 268V190H620" marker-end="url(#arw)"/>
-<path d="M645 62H868" stroke-dasharray="6 5" marker-end="url(#arw)"/>
-<path d="M965 112V370H90V112" stroke-dasharray="6 5" fill="none"/>
-</g>
-<g font-size="12" fill="#2f5c52">
-<text x="341" y="52" text-anchor="middle" font-size="11">C1 依頼票・基準の版・実行権限</text>
-<text x="341" y="108" text-anchor="middle" font-size="11">C6 報告・不合格の残り・確認項目</text>
-<text x="365" y="166" text-anchor="middle">C2 作業票</text><text x="365" y="183" text-anchor="middle">（原記録の保存先、計算式の版、出力形式）</text>
-<text x="394" y="280" text-anchor="middle">C3 集計値と</text><text x="394" y="296" text-anchor="middle">原記録の保存先</text>
-<text x="632" y="166" text-anchor="start">C4 項目ごとの合格・不合格と</text><text x="632" y="183" text-anchor="start">根拠の行</text>
-<text x="704" y="280" text-anchor="middle">C5 不合格の項目、</text><text x="704" y="296" text-anchor="middle">根拠、修正内容</text>
-<text x="756" y="54" text-anchor="middle">C7 全処理の実行記録</text>
-<text x="527" y="386" text-anchor="middle">点線：実行権限の発行・使用・失効と、再計算回数の記録</text>
-</g></g></svg></div>
-<p class="diagram-note">スマートフォンでは図を横に動かして表示します。</p>
-
-<div class="connector-list">
-<article><span>C1</span><b>試験担当者 → 実行管理</b><p>依頼票を渡します。目的、対象の試験、チェックリストの版、1回分の実行権限を含みます。</p></article>
-<article><span>C2</span><b>実行管理 → 解析処理</b><p>作業票を渡します。原記録の保存先、使う計算式の版、出力形式を含みます。対話記録は渡しません。</p></article>
-<article><span>C3</span><b>解析処理 → 照合処理</b><p>集計値と原記録の保存先を渡します。解析処理の説明文は渡しません。</p></article>
-<article><span>C4</span><b>照合処理 → 実行管理</b><p>チェック項目ごとの合格・不合格と、根拠になった原記録の行を渡します。</p></article>
-<article><span>C5</span><b>実行管理 → 再計算処理</b><p>不合格の項目、根拠、修正内容を渡します。前の処理の対話記録は渡しません。</p></article>
-<article><span>C6</span><b>実行管理 → 試験担当者</b><p>報告を渡します。照合済みの集計値、不合格の残り、担当者が確認する項目を含みます。</p></article>
-<article><span>C7</span><b>全処理 → 監視画面</b><p>再計算回数、不合格数、実行権限の状態、API利用量を送ります。ランプ表示の元になります。</p></article>
-</div>
-
-<div class="insight-heading er-heading"><div><h3>データ構造</h3><p class="note">保存するデータと、データ同士の関係です。箱にはデータ名と保存内容、線には関係名を示します。件数を含む説明と保存項目は図の下に記載します。</p></div><button id="open-er" class="expand-button">図を拡大する <span aria-hidden="true">⤢</span></button></div>
-<div class="diagram-scroll"><svg class="diagram er" viewBox="0 0 1340 646" role="img" aria-label="データ構造の図。案件、実行権限、実行記録、試験、原記録、集計、照合結果、不合格項目、再計算の9種類のデータと、その関係名。件数を含む説明は図の下に記載。">
-<g font-family="Noto,sans-serif" font-size="13" fill="#183a3d"><g><rect x="30" y="30" width="300" height="96" rx="3" fill="#fff" stroke="#6f9a8c"/><rect x="30" y="30" width="300" height="32" rx="3" fill="#dbe9e3" stroke="#6f9a8c"/><text x="180" y="52" text-anchor="middle" font-weight="600" font-size="15">案件</text><text x="44" y="92" font-size="12" fill="#4f6d64">依頼1件の目的と対象装置を保存します。</text></g><g><rect x="30" y="290" width="300" height="96" rx="3" fill="#fff" stroke="#6f9a8c"/><rect x="30" y="290" width="300" height="32" rx="3" fill="#f3e6cc" stroke="#b09a70"/><text x="180" y="312" text-anchor="middle" font-weight="600" font-size="15">実行権限</text><text x="44" y="352" font-size="12" fill="#4f6d64">1回の実行に使う権限と使用状況を保存します。</text></g><g><rect x="30" y="520" width="300" height="96" rx="3" fill="#fff" stroke="#6f9a8c"/><rect x="30" y="520" width="300" height="32" rx="3" fill="#dbe9e3" stroke="#6f9a8c"/><text x="180" y="542" text-anchor="middle" font-weight="600" font-size="15">実行記録</text><text x="44" y="582" font-size="12" fill="#4f6d64">1回の実行での各処理の状態を保存します。</text></g><g><rect x="520" y="30" width="300" height="96" rx="3" fill="#fff" stroke="#6f9a8c"/><rect x="520" y="30" width="300" height="32" rx="3" fill="#dbe9e3" stroke="#6f9a8c"/><text x="670" y="52" text-anchor="middle" font-weight="600" font-size="15">試験</text><text x="534" y="92" font-size="12" fill="#4f6d64">試験条件と実施日時を保存します。</text></g><g><rect x="520" y="290" width="300" height="96" rx="3" fill="#fff" stroke="#6f9a8c"/><rect x="520" y="290" width="300" height="32" rx="3" fill="#dbe9e3" stroke="#6f9a8c"/><text x="670" y="312" text-anchor="middle" font-weight="600" font-size="15">原記録</text><text x="534" y="352" font-size="12" fill="#4f6d64">装置から取得した測定ファイルを保存します。</text></g><g><rect x="520" y="520" width="300" height="96" rx="3" fill="#fff" stroke="#6f9a8c"/><rect x="520" y="520" width="300" height="32" rx="3" fill="#dbe9e3" stroke="#6f9a8c"/><text x="670" y="542" text-anchor="middle" font-weight="600" font-size="15">再計算</text><text x="534" y="582" font-size="12" fill="#4f6d64">不合格項目に対する再計算の結果を保存します。</text></g><g><rect x="1010" y="30" width="300" height="96" rx="3" fill="#fff" stroke="#6f9a8c"/><rect x="1010" y="30" width="300" height="32" rx="3" fill="#dbe9e3" stroke="#6f9a8c"/><text x="1160" y="52" text-anchor="middle" font-weight="600" font-size="15">集計</text><text x="1024" y="92" font-size="12" fill="#4f6d64">解析処理が原記録から計算した値を保存します。</text></g><g><rect x="1010" y="290" width="300" height="96" rx="3" fill="#fff" stroke="#6f9a8c"/><rect x="1010" y="290" width="300" height="32" rx="3" fill="#dbe9e3" stroke="#6f9a8c"/><text x="1160" y="312" text-anchor="middle" font-weight="600" font-size="15">照合結果</text><text x="1024" y="352" font-size="12" fill="#4f6d64">チェックリストで照合した結果を保存します。</text></g><g><rect x="1010" y="520" width="300" height="96" rx="3" fill="#fff" stroke="#6f9a8c"/><rect x="1010" y="520" width="300" height="32" rx="3" fill="#dbe9e3" stroke="#6f9a8c"/><text x="1160" y="542" text-anchor="middle" font-weight="600" font-size="15">不合格項目</text><text x="1024" y="582" font-size="12" fill="#4f6d64">不合格になった項目と根拠を保存します。</text></g><g stroke="#3a6d63" stroke-width="1.5" fill="none"><path d="M330 78H520"/><path d="M180 126V290"/><path d="M180 386V520"/><path d="M670 126V290"/><path d="M820 78H1010"/><path d="M1160 126V290"/><path d="M1160 386V520"/><path d="M1010 568H820"/></g><g font-size="12" fill="#2f5c52"><text x="425" y="70" text-anchor="middle">案件ごとの試験</text><text x="915" y="70" text-anchor="middle">試験の集計</text><text x="915" y="560" text-anchor="middle">不合格項目の再計算</text><text x="192" y="212">案件の実行権限</text><text x="192" y="457">実行ごとの記録</text><text x="682" y="212">試験の測定記録</text><text x="1172" y="212">集計の照合</text><text x="1172" y="457">照合の不合格項目</text></g></g></svg></div>
-<h4 class="er-sub">関係と件数</h4>
-<ul class="er-relations">
-<li><b>案件ごとの試験</b>：1件の案件に、1件以上の試験を登録します。各試験は必ず1件の案件に属します。</li>
-<li><b>案件の実行権限</b>：1件の案件に、実行のたびに1件の実行権限を発行します（1件以上）。各実行権限は必ず1件の案件に属します。</li>
-<li><b>実行ごとの記録</b>：1件の実行権限に、実行記録を0件以上保存します。実行前は0件です。</li>
-<li><b>試験の測定記録</b>：1件の試験に、原記録を1件以上保存します（温度、波形、イベントの各ファイル）。各原記録は必ず1件の試験に属します。</li>
-<li><b>試験の集計</b>：1件の試験に、集計を0件以上保存します。解析前は0件です。</li>
-<li><b>集計の照合</b>：1件の集計に、照合結果を必ず1件保存します。</li>
-<li><b>照合の不合格項目</b>：1件の照合結果に、不合格項目を0件以上保存します。すべて合格なら0件です。</li>
-<li><b>不合格項目の再計算</b>：1件の不合格項目に、再計算を0件以上保存します。再計算前は0件です。</li>
-</ul>
-<details class="accordion er-detail"><summary><span>保存項目の詳細</span><span class="detail-symbol" aria-hidden="true"></span></summary>
-<div class="accordion-body"><div class="rules-table-wrap"><table class="rules-table er-table"><thead><tr><th>データ</th><th>主な項目</th></tr></thead><tbody>
-<tr><td>案件</td><td>案件番号、目的、対象装置、チェックリストの版、状態</td></tr>
-<tr><td>実行権限</td><td>権限番号、案件番号、発行者、使用回数（上限1）、発行・使用・失効の時刻</td></tr>
-<tr><td>実行記録</td><td>記録番号、権限番号、処理名、再計算回数、累計不合格数、ランプの色、API利用量</td></tr>
-<tr><td>試験</td><td>試験番号、案件番号、装置、条件、実施日時、状態</td></tr>
-<tr><td>原記録</td><td>記録番号、試験番号、ファイル名、ハッシュ値、列名、単位（上書きしない）</td></tr>
-<tr><td>集計</td><td>集計番号、試験番号、処理名、計算式の版、集計値</td></tr>
-<tr><td>照合結果</td><td>照合番号、集計番号、処理名、チェックリストの版、合格数、不合格数</td></tr>
-<tr><td>不合格項目</td><td>項目番号、照合番号、項目名、根拠の行、修正内容</td></tr>
-<tr><td>再計算</td><td>再計算番号、項目番号、処理名、再照合の結果</td></tr>
-</tbody></table></div></div></details>
-</div>
-</section>
-
-<section class="section keys-section" id="keys">
-<div class="wrap">
-<div class="section-heading">
-<div><p class="eyebrow">04 / PERMISSIONS</p>
-<h2>実行権限の管理</h2></div>
-<p>試験担当者が実行権限を発行し、実行管理が1回だけ使います。<br class="desktop-br">処理ごとに、読める保存先と書ける保存先を限定します。</p></div>
-
-<ol class="key-steps">
-<li><span>1</span><b>発行</b><p>試験担当者が、実行のたびに1回分の実行権限を発行し、実行管理に渡します。</p></li>
-<li><span>2</span><b>使用</b><p>実行管理が1回だけ使い、その案件の原記録の保存先と出力先を開きます。</p></li>
-<li><span>3</span><b>処理の範囲</b><p>解析処理と照合処理は実行権限を持ちません。実行管理が開いた保存先だけを読み書きします。</p></li>
-<li><span>4</span><b>失効</b><p>実行の終了、または再計算回数の上限で失効します。再実行には新しい実行権限が必要です。</p></li>
-<li><span>5</span><b>記録</b><p>発行、使用、失効の時刻と、開いた保存先を実行記録に保存します。</p></li>
-</ol>
-
-<div class="key-rules">
-<article><b>装置の設定値</b><p>装置への設定値の送信は、試験担当者が操作画面から行います。AI処理は設定値の案を出力します。装置は設定範囲外の値を受け付けません。</p></article>
-<article><b>権限のない実行</b><p>実行権限のない実行要求と、失効後の再使用は、実行記録に保存して停止します。監視画面が赤になります。</p></article>
-<article><b>案件ごとの範囲</b><p>実行権限は案件単位です。他の案件の原記録は読めません。読む保存先と書く保存先は依頼票で定めます。</p></article>
-</div>
-</div>
-</section>
-
-<section class="section rules-section" id="rules">
-<div class="wrap">
-<div class="section-heading">
-<div><p class="eyebrow">05 / STOP CONDITIONS</p>
-<h2>実行条件・停止条件</h2></div>
-<p>再計算の回数と停止条件を、実行前に設定します。<br class="desktop-br">数値は例題の設定値です。案件ごとに試験担当者と定めます。</p></div>
-
-<div class="rules-table-wrap"><table class="rules-table">
-<thead><tr><th>条件</th><th>設定値の例</th><th>動作</th><th>復旧条件</th></tr></thead>
-<tbody>
-<tr><td>解析 → 照合 → 再計算の回数</td><td>3回</td><td>停止し、試験担当者に報告します。実行権限を失効します。</td><td>担当者が試験条件を見直し、新しい実行権限で再開します。</td></tr>
-<tr><td>同じチェック項目の不合格</td><td>2回連続</td><td>まず自動点検処理を実行します（原記録の保存先、単位、版）。点検で直らなければ、その項目を担当者の確認へ移します。</td><td>点検で直れば再開します。担当者へ移した場合は、担当者が原記録を確認して項目を再設定します。</td></tr>
-<tr><td>1回の実行の累計不合格数</td><td>5件</td><td>実行を停止し、状態を分類します（再実行、点検、設定の組み直し）。</td><td>分類に応じた操作の後に再開します。</td></tr>
-<tr><td>合格のまま集計値が変わる</td><td>2回</td><td>チェックリストの版を確認する処理へ移します。</td><td>担当者が版を確定します。</td></tr>
-<tr><td>実行権限のない実行、装置への設定値送信</td><td>0回（許可しない）</td><td>実行記録に保存して停止します。</td><td>担当者の確認後に再開します。</td></tr>
-<tr><td>1件あたりのAPI呼び出し回数</td><td>10回</td><td>実行管理が停止し、利用量を報告します。</td><td>担当者が上限を再設定します。</td></tr>
-</tbody></table></div>
-
-<div class="loop-types">
-<article><b>合格のまま集計値が変わる状態</b><p>照合は合格なのに、集計値が実行ごとに変わる状態です。チェックリストの項目と版を確認します。</p></article>
-<article><b>同じ項目の不合格が続く状態</b><p>解析処理を替えても同じ項目が不合格になる状態です。2回目で自動点検処理が原記録の列名、単位、計算式の版を点検し、直らなければ担当者の確認へ移します。</p></article>
-</div>
-
-<div class="insight-heading"><h3>処理ごとの規則</h3></div>
-<div class="conduct-grid">
-<article><span>解析処理</span><p>原記録にない値を作りません。欠測区間は「未測定」と記録し、平均値で埋めません。</p></article>
-<article><span>照合処理</span><p>解析処理の説明文を読まず、原記録とチェックリストで照合します。項目ごとに根拠の行を記録します。</p></article>
-<article><span>再計算処理</span><p>前の処理の対話記録を受け取らず、不合格の項目、根拠、修正内容から再計算します。</p></article>
-<article><span>実行管理</span><p>原因候補と切り分け試験の条件を一覧にします。再計算回数を数え、上限で停止します。</p></article>
-<article><span>全処理</span><p>外部資料に書かれた命令を実行しません。資料は解析対象として読みます。停止理由を実行記録に保存します。</p></article>
-<article><span>試験担当者</span><p>チェックリストと計算式の版を定めます。停止時に、再実行、点検、設定の組み直しのどれを行うかを選びます。</p></article>
-</div>
-</div>
-</section>
-
-<section class="section dashboard-section" id="dashboard">
-<div class="wrap">
-<div class="section-heading">
-<div><p class="eyebrow">06 / MONITORING</p>
-<h2>監視画面</h2></div>
-<p>各処理の状態を緑・黄・赤で表示します。<br class="desktop-br">赤のときは、再実行、点検、設定の組み直しのどれを行うかを画面で選びます。</p></div>
-
-<div class="dash-shell">
-<div class="dash-top"><div><small>MONITOR</small><h4>案件 J-0917 / 低温通電試験</h4></div>
-<div class="dash-scenarios" role="group" aria-label="表示する状況"><span class="dash-scenarios-label">表示する状況</span><button data-scenario="normal" aria-pressed="true">正常</button><button data-scenario="repair" aria-pressed="false">点検中</button><button data-scenario="reset" aria-pressed="false">停止（条件の見直し）</button><button data-scenario="rebuild" aria-pressed="false">停止（設定の組み直し）</button></div></div>
-<div class="dash-body">
-<div class="dash-head" aria-hidden="true"><span>状態</span><span>処理</span><span>回数</span><span>不合格・時刻</span><span>現在の状態</span><span>判定</span></div>
-<div id="dash-rows"></div>
-<p class="dash-message" id="dash-message" aria-live="polite"></p>
-<details class="dash-history"><summary>処理履歴を開く</summary><ul id="dash-history"></ul></details>
-</div>
-</div>
-<p class="diagram-note">表示例です。再計算回数、累計不合格数、実行権限の状態から、処理状況を表示します。解析の行には再計算回数、実行権限の行には使用回数を表示します。</p>
-
-<div class="rules-table-wrap"><table class="rules-table lamp-table">
-<thead><tr><th>ランプ</th><th>状態</th><th>判定</th><th>動作</th></tr></thead>
-<tbody>
-<tr><td><i class="lamp g"></i>緑</td><td>設定値の範囲内。再計算回数と累計不合格数が上限内。</td><td>続行</td><td>処理を継続します。</td></tr>
-<tr><td><i class="lamp y"></i>黄</td><td>同じ項目の不合格が2回目。</td><td>点検</td><td>自動点検処理が原記録の保存先、単位、版を確認して再実行します。</td></tr>
-<tr><td><i class="lamp r"></i>赤</td><td>同じ集計値のまま再計算が上限。</td><td>停止（条件の見直し）</td><td>実行権限を失効します。担当者が試験条件を見直し、新しい実行権限で再開します。</td></tr>
-<tr><td><i class="lamp r"></i>赤</td><td>チェックリストや計算式の版の不一致。原記録の欠落。</td><td>停止（設定の組み直し）</td><td>処理の設定を組み直し、担当者の承認後に再開します。</td></tr>
-<tr><td><i class="lamp r"></i>赤</td><td>実行権限のない要求。装置への設定値送信。</td><td>停止</td><td>実行記録に保存して停止します。担当者の確認後に再開します。</td></tr>
-</tbody></table></div>
-
-<div class="repair">
-<div><span class="pill">AUTO CHECK</span><h3>自動点検項目</h3><p>黄になったとき、AI処理を再実行する前にプログラムで確認します。直れば緑に戻し、直らなければ赤にします。</p></div>
-<ol>
-<li>原記録のファイルが保存先にあり、ハッシュ値が実行記録と一致することを確認します。</li>
-<li>列名と単位が、作業票の指定と一致することを確認します。</li>
-<li>チェックリストと計算式の版が、案件の版と一致することを確認します。</li>
-<li>前回の不合格項目が再計算に反映されたことを確認します。反映されていなければ再計算処理に戻します。</li>
-<li>再計算回数と不合格数を実行記録に保存し、ランプの色を更新します。</li>
-</ol>
-</div>
-</div>
-</section>
-
 <section class="section example-section" id="example">
 <div class="wrap">
 <div class="section-heading">
-<div><p class="eyebrow">07 / CASE</p>
-<h2>試験事例：低温通電試験</h2></div>
-<p>試料を冷やして通電し、温度、圧力、電圧を記録する試験です。<br class="desktop-br">装置とデータは公開用に設計した例題で、上記の構成をこの試験に当てはめています。</p></div>
-
+<div><p class="eyebrow">02 / TEST DATA &amp; ANALYSIS</p>
+<h2>低温通電試験から、次の仮説へ。</h2></div>
+<p>試料を冷やして通電し、温度・圧力・電圧を記録。<br class="desktop-br"/>小さな変化を見つけ、条件の比較と再試験につなげます。</p></div>
 <div class="case-intro">
-<figure><img src="assets/tester-monitor.png" alt="低温通電試験の装置構成。チャンバー、プローブ、顕微鏡、計測器、付属モニターを備えた研究用ベンチの3Dモデル" loading="lazy"><figcaption>低温通電試験の装置構成（3Dモデル：自作）</figcaption></figure>
+<figure><img alt="低温通電試験の装置構成。チャンバー、プローブ、顕微鏡、計測器、付属モニターを備えた研究用ベンチの3Dモデル" loading="lazy" src="assets/tester-monitor.png"/><figcaption>低温通電試験の装置構成例（3Dモデル）</figcaption></figure>
 <div class="case-copy"><span class="pill">試験条件</span>
-<h3>2ミリ秒の電圧低下の検出</h3><p>温度が安定した区間で、電圧が2ミリ秒だけ下がります。解析処理が原波形の全点から低下区間を抽出し、照合処理が原波形と突き合わせます。原因候補（接触、電源、温度、弁の動作）ごとに切り分け試験の条件を一覧にし、試験担当者が次の試験を選びます。</p>
+<h3>2ミリ秒の変化を、原波形から。</h3><p>全点の集計で短い電圧低下を抽出し、温度や弁の動作と比較します。AIは接触・電源・温度などの原因候補を整理し、条件を一つずつ変える試験案と報告をまとめます。</p>
 <div class="case-facts">
 <div><b>−80<span>°C</span></b><small>チャック温度（設計目標）</small></div>
 <div><b>10<span>kHz</span></b><small>波形の取得条件</small></div>
@@ -270,30 +49,13 @@
 </div>
 <p class="note">試料温度とチャック温度は別チャンネルで測定します。以下の表示は合成データです。</p></div>
 </div>
-
-<div class="protect">
-<div class="insight-heading"><h3>装置の保護機能（設計仕様）</h3></div>
-<div class="rules-table-wrap"><table class="rules-table protect-table">
-<thead><tr><th>機能</th><th>入力条件</th><th>動作</th><th>復旧条件</th></tr></thead>
-<tbody>
-<tr><td>非常停止</td><td>非常停止ボタンの押下</td><td>通電電源、ヒーター、ガス供給弁を遮断します。チャックの冷却と記録は継続します。</td><td>ボタンを解除し、試験担当者が操作画面で復帰操作を行います。通電は再開条件の確認後に再開します。</td></tr>
-<tr><td>扉ロック</td><td>チャンバー扉の開放を検出</td><td>通電を停止し、扉の開放時刻を記録します。</td><td>扉を閉じ、担当者が再開操作を行います。</td></tr>
-<tr><td>温度インターロック</td><td>試料温度またはチャック温度が設定範囲外</td><td>通電の開始を許可しません。通電中なら停止します。</td><td>温度が範囲内に戻り、担当者が再開操作を行います。</td></tr>
-<tr><td>過電流保護</td><td>電流が設定上限を超過</td><td>電源出力を遮断し、直前の波形と時刻を保存します。</td><td>担当者が原因を確認し、上限値を再設定して再開します。</td></tr>
-<tr><td>独立した遮断系</td><td>温度上限リレーの作動（PLCとは独立）</td><td>ヒーター電源を機械的に遮断します。</td><td>担当者がリレーを手動でリセットします。</td></tr>
-<tr><td>設定値の送信</td><td>AI処理が出力した設定値の案</td><td>担当者が操作画面で確認して装置に送信します。装置は設定範囲外の値を受け付けません。</td><td>該当なし。</td></tr>
-</tbody></table></div>
-</div>
-
 <div class="daily-heading">
-<h3>1日の作業（5項目）</h3><p>この5項目を、解析 → 照合 → 再計算 → 再照合の順で処理します。</p></div>
+<h3>1日の作業（5項目）</h3><p>集計から原因比較、再試験案、報告までを一つの工程に。</p></div>
 <ol class="daily-tasks"><li><span>01</span><b>温度の整理</b><p>試料とチャックの温度差、安定区間を集計します。</p></li><li><span>02</span><b>波形の解析</b><p>電圧の低下区間と継続時間を抽出します。</p></li><li><span>03</span><b>原因候補の比較</b><p>接触、電源、温度、弁の動作の関係を比較します。</p></li><li><span>04</span><b>再試験条件の作成</b><p>条件を1つずつ変える試験案を作成します。</p></li><li><span>05</span><b>日次報告</b><p>根拠と確認項目を添えて、試験担当者に報告します。</p></li></ol>
-
 <div class="monitor-heading" id="monitor">
 <div><p class="eyebrow">INTERACTIVE / 操作できます</p>
 <h3>試験担当者のモニター画面</h3></div>
 <p>試験を選ぶ → 波形を拡大する → 確認項目を読む</p></div>
-
 <div class="monitor-shell">
 <div class="monitor-top">
 <div><small>RESEARCH MONITOR</small><h4>低温通電試験</h4></div>
@@ -301,7 +63,7 @@
 <div class="monitor-body">
 <div class="toolbar">
 <div class="run-picker"><label for="run">表示する試験</label><select id="run"></select></div>
-<span id="status" class="status"></span></div>
+<span class="status" id="status"></span></div>
 <div class="stats">
 <div class="stat"><span>試料の最低温度</span><strong id="temperature">—</strong><small>試料チャンネル</small></div>
 <div class="stat"><span>電圧の最小値</span><strong id="voltage">—</strong><small>波形の全点から集計</small></div>
@@ -311,12 +73,12 @@
 <div class="charts-layout">
 <div class="wave-panel">
 <div class="chart-heading"><h4>電圧の波形</h4>
-<div class="chart-controls" role="group" aria-label="波形の表示範囲"><button class="active" id="overview" aria-pressed="true">全体（2秒）を表示</button><button id="zoom" aria-pressed="false">低下区間を拡大</button></div>
+<div aria-label="波形の表示範囲" class="chart-controls" role="group"><button aria-pressed="true" class="active" id="overview">全体（2秒）を表示</button><button aria-pressed="false" id="zoom">低下区間を拡大</button></div>
 </div>
-<svg id="wave" class="wave-svg" role="img" aria-label="選択した試験の時間と電圧の波形"></svg>
+<svg aria-label="選択した試験の時間と電圧の波形" class="wave-svg" id="wave" role="img"></svg>
 <div class="chart-legend"><span>電圧（V）</span><span>弁切替イベント</span></div>
 </div>
-<aside class="inspector" aria-live="polite"><span class="eyebrow">確認項目</span><h4 id="finding"></h4><p id="finding-detail"></p><b>次に確認すること</b><p id="next-check"></p></aside></div>
+<aside aria-live="polite" class="inspector"><span class="eyebrow">確認項目</span><h4 id="finding"></h4><p id="finding-detail"></p><b>次に確認すること</b><p id="next-check"></p></aside></div>
 <p class="monitor-bottom" id="data-summary"></p>
 <details class="measurement-details"><summary>測定値の表を開く</summary><p id="sample-caption"></p>
 <div class="sample-table">
@@ -325,155 +87,73 @@
 </details>
 </div>
 </div>
-<div class="research-judgment"><span>試験担当者の操作</span><p>試験の目的を決め、現物を確認し、次の試験条件を選びます。集計と照合はAI処理が行います。</p></div>
+<div class="research-judgment"><span>研究者の時間を、次の実験へ</span><p>集計と比較を自動化し、変化の理由を考えること、現物を確かめること、次の条件を選ぶことに時間を使えます。</p></div>
 </div>
 </section>
-
+<section class="section control-section" id="control"><div class="wrap"><div class="section-heading"><div><p class="eyebrow">03 / CONTROL &amp; AUTOMATION</p><h2>装置の動きと、<br/>データの流れを一緒に設計。</h2></div><p>温調・通電・計測のシーケンスから、<br class="desktop-br"/>操作画面、記録、解析への受け渡しまでつなげます。</p></div><div class="control-flow"><article><span>01 / 設定</span><h3>試験条件を入力</h3><p>温度・通電条件・保持時間を操作画面で設定。</p></article><article><span>02 / 制御</span><h3>PLCで工程を進行</h3><p>温調、通電、弁動作、計測の順序を制御。</p></article><article><span>03 / 計測</span><h3>時刻をそろえて記録</h3><p>試料・チャック温度、電圧、圧力、弁の動作を保存。</p></article><article><span>04 / 解析</span><h3>比較と報告につなぐ</h3><p>条件別に集計し、変化点と再試験案を画面へ。</p></article></div><div class="control-protection"><div><p class="eyebrow">装置側の保護設計</p><h3>インターロックと、<br/>PLCから独立した遮断系。</h3></div><p>非常停止、扉ロック、温度インターロック、過電流保護を制御に組み込みます。温度上限リレーによるヒーターの独立遮断も、装置の保護系として設計します。</p></div><details class="accordion" id="device-protection"><summary><span>低温通電試験での保護機能を見る</span><span aria-hidden="true" class="detail-symbol"></span></summary><div class="accordion-body"><p class="note">この試験装置の設計例です。</p><div class="rules-table-wrap"><table class="rules-table protect-table">
+<thead><tr><th>機能</th><th>入力条件</th><th>動作</th><th>復旧条件</th></tr></thead>
+<tbody>
+<tr><td>非常停止</td><td>非常停止ボタンの押下</td><td>通電電源、ヒーター、ガス供給弁を遮断します。チャックの冷却と記録は継続します。</td><td>ボタンを解除し、試験担当者が操作画面で復帰操作を行います。通電は再開条件の確認後に再開します。</td></tr>
+<tr><td>扉ロック</td><td>チャンバー扉の開放を検出</td><td>通電を停止し、扉の開放時刻を記録します。</td><td>扉を閉じ、担当者が再開操作を行います。</td></tr>
+<tr><td>温度インターロック</td><td>試料温度またはチャック温度が設定範囲外</td><td>通電の開始を許可しません。通電中なら停止します。</td><td>温度が範囲内に戻り、担当者が再開操作を行います。</td></tr>
+<tr><td>過電流保護</td><td>電流が設定上限を超過</td><td>電源出力を遮断し、直前の波形と時刻を保存します。</td><td>担当者が原因を確認し、上限値を再設定して再開します。</td></tr>
+<tr><td>独立した遮断系</td><td>温度上限リレーの作動（PLCとは独立）</td><td>ヒーター電源を機械的に遮断します。</td><td>担当者がリレーを手動でリセットします。</td></tr>
+</tbody></table></div></div></details></div></section>
+<section class="section architecture-section" id="architecture"><div class="wrap"><div class="section-heading"><div><p class="eyebrow">04 / AI IN THE WORKFLOW</p><h2>複数の試験を、<br/>一つの研究工程につなぐ。</h2></div><p>AIは解析・比較・報告を分担。<br class="desktop-br"/>原記録の照合と結果の整理まで、工程として組みます。</p></div><div class="harness"><div class="director"><span class="role-label">指揮 / 全体の進行と結果の整理</span><strong>研究の目的を、試験ごとの仕事へ。</strong><p>依頼を分け、装置ごとの結果を集め、次の試験案をまとめます。</p></div><div aria-hidden="true" class="branches"><span class="stem"></span><span class="crossbar"></span><i></i><i></i><i></i></div><div class="device-grid"><article class="device"><p class="device-no">DEVICE A</p><h3>温度評価</h3><div class="ai-task"><b>解析・比較</b><span>温度差と安定区間を集計</span></div><p class="handoff">原記録と照合 <span aria-hidden="true">↓</span></p><p class="device-purpose">接触条件と温度差を比べ、冷却条件の検討へ。</p></article><article class="device"><p class="device-no">DEVICE B</p><h3>通電試験</h3><div class="ai-task"><b>解析・比較</b><span>短い電圧低下を抽出</span></div><p class="handoff">原波形と照合 <span aria-hidden="true">↓</span></p><p class="device-purpose">接触・電源・弁の関係を比べ、原因の切り分けへ。</p></article><article class="device"><p class="device-no">DEVICE C</p><h3>圧力応答</h3><div class="ai-task"><b>解析・比較</b><span>弁指令と圧力応答を整理</span></div><p class="handoff">動作時刻と照合 <span aria-hidden="true">↓</span></p><p class="device-purpose">応答の遅れと安定性を比べ、動作条件の検討へ。</p></article></div><p class="harness-note">集計はプログラム、比較と試験案はAI。結果と根拠を、研究者が見渡せる形にまとめます。</p></div><details class="accordion model-notes" id="model-notes"><summary><span>モデルの組合せ例を見る</span><span aria-hidden="true" class="detail-symbol"></span></summary><div class="accordion-body"><p>作業内容と必要な精度に応じてモデルを選び、APIの利用量を試算します。</p><dl class="model-roles"><div><dt>指揮</dt><dd>Fable 5.1 / GPT-6 Astra</dd></div><div><dt>作業</dt><dd>Sonnet 5 / GPT-5.6 Luna / Terra</dd></div><div><dt>照合</dt><dd>Opus 5 / GPT-5.6 Sol</dd></div></dl><p class="note">Claude Code / Codexの構成例。</p></div></details></div></section>
+<section class="section dashboard-section" id="dashboard"><div class="wrap"><div class="section-heading"><div><p class="eyebrow">05 / TEST OVERVIEW</p><h2>確認したい試験を、<br/>一覧から波形へ。</h2></div><p>確認が必要な試験を絞り込み、数値と注目点を比較。<br class="desktop-br"/>「波形を見る」から、このページ内のモニターへ進めます。</p></div><div class="dash-shell"><div class="dash-top"><div><small>TEST OVERVIEW</small><h4>低温通電試験 / 8試験</h4></div><div aria-label="試験一覧の絞り込み" class="dash-scenarios" role="group"><button aria-pressed="true" data-filter="all">すべて</button><button aria-pressed="false" data-filter="review">確認する試験</button><button aria-pressed="false" data-filter="good">基準内</button></div></div><div class="dash-body"><div aria-hidden="true" class="dash-head"><span>状態</span><span>試験</span><span>最低温度</span><span>最小電圧</span><span>注目点</span><span>詳細</span></div><div id="dash-rows"></div><p aria-live="polite" class="dash-message" id="dash-message"></p></div></div><p class="diagram-note">公開用の合成データ8試験を使った表示例。波形モニターと同じ記録を一覧にしています。</p><div class="overview-value"><span>こんな業務にも</span><p>試験条件の比較、検査結果の一覧化、計測ログの自動集計、異常箇所から原記録への移動など、確認と報告の手間を減らす画面に応用できます。</p></div></div></section>
 <section class="section design-section" id="design">
 <div class="wrap">
 <div class="section-heading">
-<div><p class="eyebrow">08 / 3D MODEL &amp; DRAWING</p>
-<h2>3Dモデル・構造図</h2></div>
-<p>例題の装置を3Dモデルと図面で示します。<br class="desktop-br">装置の全体、内部の構成、組立図、部品図を切り替えて表示します。</p></div>
+<div><p class="eyebrow">06 / 3D &amp; DRAWING</p>
+<h2>構想を立体に、寸法を図面に。</h2></div>
+<p>装置の配置、調整する場所、部品の取付位置を共有。<br class="desktop-br"/>立体と図面を切り替え、具体的な検討につなげます。</p></div>
 <div class="design-layout">
 <div class="design-gallery">
-<div class="gallery-tabs" role="group" aria-label="表示する図"><button data-view="station" aria-pressed="true">装置の全体</button><button data-view="cad" aria-pressed="false">CAD表示</button><button data-view="inside" aria-pressed="false">内部の構成</button><button data-view="assembly" aria-pressed="false">組立図</button><button data-view="plate" aria-pressed="false">部品図</button></div>
-<figure class="design-figure"><img id="design-image" src="assets/tester-monitor.png" alt="モニターを備えた研究用ベンチの全体構成の3Dモデル" loading="lazy"></figure>
-<div class="gallery-bottom"><p id="design-caption" aria-live="polite">チャンバー、プローブ、計測器、付属モニターを載せた研究用ベンチ。</p><button id="open-viewer" class="expand-button">図を拡大する <span aria-hidden="true">⤢</span></button></div>
+<div aria-label="表示する図" class="gallery-tabs" role="group"><button aria-pressed="true" data-view="station">装置の全体</button><button aria-pressed="false" data-view="cad">CAD表示</button><button aria-pressed="false" data-view="inside">内部の構成</button><button aria-pressed="false" data-view="assembly">組立図</button><button aria-pressed="false" data-view="plate">部品図</button></div>
+<figure class="design-figure"><img alt="モニターを備えた研究用ベンチの全体構成の3Dモデル" id="design-image" loading="lazy" src="assets/tester-monitor.png"/></figure>
+<div class="gallery-bottom"><p aria-live="polite" id="design-caption">チャンバー、プローブ、計測器、付属モニターを載せた研究用ベンチ。</p><button class="expand-button" id="open-viewer">図を拡大する <span aria-hidden="true">⤢</span></button></div>
 </div>
 <div class="design-copy"><span class="pill">3D CAD / DRAWING</span>
 <h3>対応する作業</h3>
-<ul class="design-points"><li><b>3Dモデル</b><p>装置の構想モデルをBlenderで作成します。.blend と .glb を同梱しています。</p></li><li><b>組立図・部品図</b><p>正面、平面、立体の三面図と、穴位置、穴径、板厚を示す部品図を作成します。</p></li><li><b>SolidWorks</b><p>部品、アセンブリ、図面を作成します。業務用のアカウントと作業環境は依頼元で用意する形です。</p></li></ul>
+<ul class="design-points"><li><b>3Dモデル</b><p>装置の構想モデルをBlenderで作成し、配置や内部構成を検討できます。掲載はレンダリング画像と図面です。.blend / .glb形式での受け渡しにも対応します。</p></li><li><b>組立図・部品図</b><p>正面図・平面図・立体図と、穴位置・穴径・板厚を示す部品図で、構造と寸法を共有できます。</p></li><li><b>SolidWorks</b><p>部品、アセンブリ、図面を作成します。業務用のアカウントと作業環境は依頼元で用意する形です。</p></li></ul>
 <p class="note">表示は例題の構想設計です。</p></div>
 </div>
 </div>
 </section>
-
 <section class="section workload-section" id="workload">
 <div class="wrap">
 <div class="section-heading">
-<div><p class="eyebrow">09 / TIME &amp; COST</p>
-<h2>作業時間・費用</h2></div>
-<p>低温通電試験の5項目を月20日行う条件で、<br class="desktop-br">人に外注する場合と社内でAI処理を使う場合の費用を試算します。</p></div>
+<div><p class="eyebrow">07 / WORK &amp; COST</p>
+<h2>研究者の負担と、作業費を減らす。</h2></div>
+<p>解析・比較・報告をAIとプログラムに分担させる費用例。<br class="desktop-br"/>案件に応じてモデルを選び、必要なAPI利用量を見積もります。</p></div>
 <div class="workload-label"><strong>5項目 / 日 × 20日 = 月100件（試算の条件）</strong><span>温度の整理、波形の解析、原因候補の比較、再試験条件の作成、日次報告</span></div>
 <div class="cost-comparison"><article class="cost-card human-cost"><p>人に外注する場合（試算）</p>
 <div class="cost-number">320<span>万円</span></div>
 <p class="cost-basis">160時間 × 時間単価2万円</p>
-<div class="cost-description">作業を外部へ依頼し、<br>条件の説明と受入確認を社内で行います。</div>
+<div class="cost-description">作業を外部へ依頼し、<br/>条件の説明と受入確認を社内で行います。</div>
 </article>
 <article class="cost-card ai-cost"><p>社内でAI処理を使う場合（試算）</p>
 <div class="cost-number"><small>約</small>3<span>万円 / 月</span></div>
 <p class="cost-basis">API利用料 <strong>＋ 社内工数</strong></p>
-<div class="cost-description">集計と照合をAI処理が行い、<br>試験担当者はチェックリストの作成、確認項目の判断、試験条件の選択を行います。</div>
+<div class="cost-description">集計と照合を自動化し、研究者は原因の検討、現物の確認、次の試験条件の選択へ。</div>
 </article>
 </div>
 <p class="cost-note">試算の対象：段取り、計算、照合、報告の作業時間。試験の暴露時間・保持時間は対象外です。社内工数は金額に含めていません。</p>
-<details class="accordion" id="cost-details"><summary><span>月約3万円の算定条件とトークンの内訳</span><span class="detail-symbol" aria-hidden="true"></span></summary>
-<div class="accordion-body"><p>Anthropic APIで、解析処理：Sonnet 5、照合処理：Opus 5、実行管理：Fable 5.1を使う条件です。1件分には処理中の呼び出しを含めます。Codexの料金は別に計算します。</p>
-<div class="token-cards"><article><p>解析処理 / Sonnet 5</p><h4>12,000円</h4><dl>
-<div><dt>1件の入力 / 出力</dt><dd>20万 / 4万トークン</dd></div>
-<div><dt>月間の入力 / 出力</dt><dd>2,000万 / 400万</dd></div>
-<div><dt>100万トークンあたり</dt><dd>入力 $2 / 出力 $10</dd></div>
-</dl></article>
-<article><p>照合処理 / Opus 5</p><h4>12,000円</h4><dl>
-<div><dt>1件の入力 / 出力</dt><dd>10万 / 1.2万トークン</dd></div>
-<div><dt>月間の入力 / 出力</dt><dd>1,000万 / 120万</dd></div>
-<div><dt>100万トークンあたり</dt><dd>入力 $5 / 出力 $25</dd></div>
-</dl></article>
-<article><p>実行管理 / Fable 5.1</p><h4>6,000円</h4><dl>
-<div><dt>1件の入力 / 出力</dt><dd>2万 / 0.4万トークン</dd></div>
-<div><dt>月間の入力 / 出力</dt><dd>200万 / 40万</dd></div>
-<div><dt>100万トークンあたり</dt><dd>入力 $10 / 出力 $50</dd></div>
-</dl></article>
-</div>
-<p><strong>合計：入力3,200万 / 出力560万トークン、$200 × 想定150円 = 30,000円（税別）。</strong></p><p>原波形の全点集計はプログラムで行い、AI処理には抽出区間、比較結果、必要な記録を渡します。原波形を毎回すべて入力する場合や、再計算を繰り返す場合は利用量が増えます。Enterpriseの契約料と、装置・システムの初期構築費は含めていません。</p><p class="source"><a href="https://platform.claude.com/docs/en/about-claude/pricing" target="_blank" rel="noopener noreferrer">API料金の公式資料を開く（別タブ） ↗</a></p></div>
-</details>
+<details class="accordion" id="cost-details"><summary><span>この試算の前提を見る</span><span aria-hidden="true" class="detail-symbol"></span></summary><div class="accordion-body compact-cost"><p>月100タスクをSonnet 5（作業）・Opus 5（照合）・Fable 5.1（指揮）で処理する想定。月間入力3,200万・出力560万トークン、$200 × 想定150円 = 30,000円（税別）です。</p><p>原波形はプログラムで集計し、AIには比較に必要な区間と結果を渡します。実際のAPI費は利用量で変わり、社内工数・Enterprise契約料・初期構築費は別です。</p><p class="source"><a href="https://platform.claude.com/docs/en/about-claude/pricing" rel="noopener noreferrer" target="_blank">算定に用いたAPI料金（公式・別タブ） ↗</a></p></div></details>
 </div>
 </section>
-
-<section class="section enterprise-section" id="enterprise">
-<div class="wrap">
-<div class="section-heading">
-<div><p class="eyebrow">10 / DATA MANAGEMENT</p>
-<h2>データ管理</h2></div>
-<p>保存先、学習への利用、保存期間、閲覧権限を、利用する契約ごとに確認して設計します。<br class="desktop-br">研究のデータがどこを通るかを、処理の構成に含めます。</p></div>
-<div class="privacy-summary">
-<div class="privacy-statement"><span class="pill">企業向けの学習方針</span>
-<h3>商用API・企業向けプランは、<br>入出力を既定で学習に使わない。</h3><p>AnthropicのAPI・Claude Team / Enterprise、OpenAIのAPI・ChatGPT Business / Enterpriseが対象です。任意のデータ提供や評価送信は、利用経路ごとの設定を確認します。</p></div>
-<div class="privacy-flow"><span>社内の原記録</span><i aria-hidden="true">↓</i><span>必要な区間・情報を抽出</span><i aria-hidden="true">↓</i><strong>会社が承認したAPI・組織アカウント</strong><i aria-hidden="true">↓</i><span>結果と根拠を社内に保存</span></div>
-</div>
-<details class="accordion" id="training"><summary><span>学習への利用と企業向けアカウント</span><span class="detail-symbol" aria-hidden="true"></span></summary>
-<div class="accordion-body">
-<div class="policy-grid"><article>
-<h3>Claude / Anthropic</h3><p>API、Claude Team / Enterpriseの商用入出力は既定で学習に使いません。個人のFree / Pro / Maxは個人向けの規約と設定が適用されます。</p><p>評価ボタンなどで提供した会話は学習に使われる場合があり、関連会話は最大5年保存される扱いです。企業管理者は「Rate chats」で評価送信を管理できます。</p><p class="source"><a href="https://privacy.claude.com/en/articles/7996868-is-my-data-used-for-model-training" target="_blank" rel="noopener noreferrer">Anthropic：学習・評価送信の方針を開く ↗</a></p></article>
-<article>
-<h3>Codex / OpenAI</h3><p>OpenAI API、ChatGPT Business / Enterpriseの業務データは既定で学習に使いません。Codexも、会社が承認した組織アカウントまたはAPIの経路を使います。</p><p>学習用に共有する設定を明示的に有効にしたデータは別扱いです。利用する契約、接続先、データ共有設定をそろえます。</p><p class="source"><a href="https://openai.com/enterprise-privacy/" target="_blank" rel="noopener noreferrer">OpenAI：企業データの方針を開く ↗</a></p></article>
-</div>
-</div>
-</details>
-<details class="accordion" id="confidentiality"><summary><span>守秘義務と、Enterprise・APIの違い</span><span class="detail-symbol" aria-hidden="true"></span></summary>
-<div class="accordion-body">
-<h3>守秘義務の定め方</h3><p>Anthropicの商用規約では、入力と出力は顧客の機密情報として扱われます。提供会社との商用契約・DPA、社内のアクセス権限、接続サービスの送信先を組み合わせて管理します。業務上必要な担当者のアクセスや法令に基づく開示には、それぞれ条件があります。</p>
-<div class="policy-grid"><article><h4>Enterprise：組織での利用を管理</h4><p>SSO、ユーザー管理、アクセス権限、監査ログ、データ保持などを管理するプランです。席・契約料金は各社の契約条件によります。</p></article>
-<article><h4>API：処理からAIを呼び出す経路</h4><p>解析、照合、実行管理をプログラムでつなぐ経路です。上の月約3万円は、このAPI処理分の試算です。</p></article>
-</div>
-<p class="source"><a href="https://www.anthropic.com/legal/commercial-terms" target="_blank" rel="noopener noreferrer">Anthropic商用規約を開く ↗</a>　<a href="https://www.anthropic.com/legal/data-processing-addendum" target="_blank" rel="noopener noreferrer">DPAを開く ↗</a>　<a href="https://claude.com/solutions/enterprise" target="_blank" rel="noopener noreferrer">Claude Enterpriseを開く ↗</a>　<a href="https://openai.com/enterprise-privacy/" target="_blank" rel="noopener noreferrer">OpenAIの管理とアクセス方針を開く ↗</a></p></div>
-</details>
-<details class="accordion" id="retention"><summary><span>保存期間・ゼロデータ保持・モデルごとの条件</span><span class="detail-symbol" aria-hidden="true"></span></summary>
-<div class="accordion-body"><p>学習への不使用と保存期間は、別の設定です。機能ごとの保存条件と、利用モデルに適用される条件を確認します。</p>
-<div class="policy-grid"><article>
-<h3>Anthropic</h3>
-<ul><li>通常のAPIは原則30日以内に削除します。Files APIなど機能別の条件と例外があります。</li><li>Enterpriseの会話・プロジェクトは既定で無期限です。管理者は最短30日から設定でき、プロジェクト側の保持設定が優先される場合があります。</li><li>ZDR（ゼロデータ保持）は、対象製品・組織への個別適用です。</li></ul>
-<p>Fable 5.1はCovered Modelsの対象で、通常は安全性監視のため30日の保存と限定的な確認があります。2026年9月1日発表のEFSは秋から段階展開の予定です。対象と通知された顧客には、移行までFable 5 / 5.1のZDRが提供されます。</p></article>
-<article>
-<h3>OpenAI</h3><p>APIの不正利用監視ログは通常、最大30日保存されます。ファイルや会話などの状態を保持する機能には別の条件があります。ZDRは対象組織・機能への適用を確認します。</p><p>ChatGPT Enterpriseの保持期間は組織管理者が管理します。削除後のデータは原則30日以内に削除され、法令上の保持などには例外があります。</p></article>
-</div>
-<div class="source source-list"><a href="https://privacy.claude.com/en/articles/7996866-how-long-do-you-store-my-organization-s-data" target="_blank" rel="noopener noreferrer">Anthropic：標準の保存期間 ↗</a><a href="https://support.claude.com/en/articles/10440198-configure-custom-data-retention-controls-for-enterprise-plans" target="_blank" rel="noopener noreferrer">Enterpriseの保持設定 ↗</a><a href="https://privacy.claude.com/en/articles/8956058-i-have-a-zero-data-retention-agreement-with-anthropic-what-products-does-it-apply-to" target="_blank" rel="noopener noreferrer">ZDRの適用範囲 ↗</a><a href="https://privacy.claude.com/en/articles/15425996-data-retention-practices-for-covered-models" target="_blank" rel="noopener noreferrer">Covered Modelsの保存条件 ↗</a><a href="https://www.anthropic.com/news/enterprise-frontier-safeguards" target="_blank" rel="noopener noreferrer">EFSの提供予定 ↗</a><a href="https://platform.openai.com/docs/guides/your-data" target="_blank" rel="noopener noreferrer">OpenAI：APIのデータ管理 ↗</a></div>
-</div>
-</details>
-<details class="accordion" id="people"><summary><span>外注と社内AI処理の役割分担</span><span class="detail-symbol" aria-hidden="true"></span></summary>
-<div class="accordion-body">
-<div class="policy-grid"><article>
-<h3>人に外注する場合</h3><p>外注担当者が計算、比較、報告を行います。社内では依頼条件を整理し、報告を受け入れ、試験の判断を行います。機密は外注先との契約やNDAで取り決めます。</p></article>
-<article>
-<h3>社内でAI処理を使う場合</h3><p>解析処理、照合処理、実行管理が処理を分担します。試験担当者はチェックリストの作成、確認項目の判断、試験条件の選択、装置の操作を行います。費用はAPI利用料と社内工数です。機密は提供会社との契約と社内の権限管理で扱います。</p></article>
-</div>
-<p>原記録との照合結果と、担当者が確認する項目をまとめて報告します。</p></div>
-</details>
-<details class="accordion risks" id="risks"><summary><span>データの取り扱い規則</span><span class="detail-symbol" aria-hidden="true"></span></summary>
-<div class="accordion-body">
-<div class="risk-grid"><article><span>01 / アカウント</span>
-<h3>承認された組織アカウントの使用</h3><p>会社が承認した組織アカウントと経路だけを使います。個人アカウントに図面や測定データを入力しません。</p></article>
-<article><span>02 / 読取範囲</span>
-<h3>保存先の限定</h3><p>処理が読める保存先を案件フォルダーに限定します。認証情報は、処理に渡す文書から分けて保管します。</p></article>
-<article><span>03 / 外部資料</span>
-<h3>外部資料の扱い</h3><p>外部資料に書かれた命令は実行せず、解析対象として読みます。送信先と操作権限を処理ごとに固定します。</p></article>
-<article><span>04 / 装置の設定値</span>
-<h3>担当者による送信</h3><p>装置への設定値の送信は担当者が操作画面から行います。装置は設定範囲外の値を受け付けません。</p></article>
-<article><span>05 / 測定値の照合</span>
-<h3>原波形と基準器による照合</h3><p>集計値の照合は、原波形、測定対象、基準器との比較で行います。</p></article>
-<article><span>06 / API利用量</span>
-<h3>呼び出し回数の上限</h3><p>1件あたりの呼び出し回数に上限を設け、利用量を監視画面に表示します。</p></article>
-</div>
-<p class="source">外部資料に書かれた命令の混入について：<a href="https://www.anthropic.com/news/prompt-injection-defenses" target="_blank" rel="noopener noreferrer">Anthropicの解説を開く ↗</a></p></div>
-</details>
-<p class="policy-date">企業利用の方針・料金：2026年9月17日確認。各項目の公式資料は別タブで開きます。</p></div>
-</section>
-
+<section class="section enterprise-section" id="enterprise"><div class="wrap compact-enterprise"><div><p class="eyebrow">08 / BUSINESS DATA</p><h2>企業データの扱い</h2></div><div class="business-data-copy"><p>Anthropic API・Claude Team / Enterprise、OpenAI API・ChatGPT Business / Enterpriseの入出力は、既定でモデル学習に使われません。</p><p>会社で承認した契約・組織アカウントを使い、守秘・保存期間・データ共有設定を利用条件に合わせます。</p><p>原記録は社内で管理し、処理に必要な情報を渡す構成を設計します。</p><p class="source"><a href="https://privacy.claude.com/en/articles/7996868-is-my-data-used-for-model-training" rel="noopener noreferrer" target="_blank">Anthropicの公式方針 ↗</a>　<a href="https://openai.com/enterprise-privacy/" rel="noopener noreferrer" target="_blank">OpenAIの公式方針 ↗</a></p></div></div></section>
 <section class="closing" id="contact">
 <div class="wrap closing-grid">
 <div><p class="eyebrow">CONTACT</p>
-<h2>ご相談・お問い合わせ</h2><p>相談できる業務：AI処理基盤の設計、試験データの解析、監視画面の作成、装置の3Dモデル・図面。<br>依頼先の装置とデータに合わせて設計します。ご相談は、ご案内メールへの返信、または応募先のメッセージ機能からご連絡ください。</p></div>
-<a class="button light" href="https://github.com/koolish777/rd-ai-portfolio" target="_blank" rel="noopener noreferrer">ページの仕組みをGitHubで見る <span aria-hidden="true">↗</span></a></div>
-</section>
-
-</main><footer>
+<h2>現場の課題を、動く仕組みに。</h2><p>試験データの解析、装置制御、監視画面、3Dモデル・図面。<br/>必要な部分を組み合わせ、研究開発と日々の業務を進めやすくします。<br/>ご相談は、ご案内メールへの返信、または応募先のメッセージ機能からご連絡ください。</p></div>
+<a class="button light" href="https://github.com/koolish777/rd-ai-portfolio" rel="noopener noreferrer" target="_blank">ページの仕組みをGitHubで見る <span aria-hidden="true">↗</span></a></div>
+</section></main><footer>
 <div class="wrap footer-inner"><a class="brand" href="#top">研究開発・AIシステム設計<span>個人ポートフォリオ</span></a><p>個人の研究開発・技術紹介</p><a class="back-top" href="#top">ページの先頭へ ↑</a></div>
 </footer>
-
-<dialog id="image-viewer" aria-labelledby="viewer-title">
+<dialog aria-labelledby="viewer-title" id="image-viewer">
 <div class="viewer-head">
-<h2 id="viewer-title">装置の全体</h2><button id="close-viewer" aria-label="拡大表示を閉じる">閉じる <span aria-hidden="true">×</span></button></div>
-<div class="viewer-scroll"><img id="viewer-image" alt=""></div>
+<h2 id="viewer-title">装置の全体</h2><button aria-label="拡大表示を閉じる" id="close-viewer">閉じる <span aria-hidden="true">×</span></button></div>
+<div class="viewer-scroll"><img alt="" id="viewer-image"/></div>
 <p id="viewer-note"></p></dialog>
 </body></html>
