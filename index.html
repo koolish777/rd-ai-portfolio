@@ -390,19 +390,18 @@
 <p>上の提案表では、試験ごとの準備・条件変更・取得操作・結果確認を工数で比べます。<br class="desktop-br">ここでは日々の整理・解析・提案・報告を月20日続ける条件で、費用を試算します。</p></div>
 <p class="workload-connection">AIがデータ整理、比較表、再計算、次の試験票を用意し、担当者は条件の選択と装置の調整に時間を使います。途中結果・選んだ理由・残る課題を引き継ぎ、長期の実験やデバッグを続けます。</p>
 <div class="workload-label"><strong>5項目 / 日 × 20日 = 月100件（試算の条件）</strong><span>温度の整理、波形の解析、原因候補の比較、再試験条件の作成、日次報告</span></div>
-<div class="cost-comparison"><article class="cost-card human-cost"><p>人に外注する場合（試算）</p>
+<div class="cost-comparison"><article class="cost-card human-cost"><p>テストを外注した場合（試算）</p>
 <div class="cost-number">320<span>万円</span></div>
 <p class="cost-basis">160時間 × 時間単価2万円</p>
 <div class="cost-description">作業を外部へ依頼し、<br>条件の説明と受入確認を社内で行います。</div>
 </article>
 <article class="cost-card ai-cost"><p>社内でAI処理を使う場合（試算）</p>
-<div class="cost-number"><small>約</small>3<span>万円 / 月</span></div>
-<p class="cost-basis">API利用料 <strong>＋ 社内工数</strong></p>
+<div class="cost-total"><p class="cost-api">API <span>月約3万円</span></p><p class="cost-labor">＋ 社内工数</p></div>
 <div class="cost-description">集計と照合をAI処理が行い、<br>試験担当者はチェックリストの作成、確認項目の判断、試験条件の選択を行います。</div>
 </article>
 </div>
 <p class="cost-note">試算の対象：段取り、計算、照合、報告の作業時間。試験の暴露時間・保持時間は対象外です。社内工数は金額に含めていません。</p>
-<details class="accordion" id="cost-details"><summary><span>月約3万円の算定条件とトークンの内訳</span><span class="detail-symbol" aria-hidden="true"></span></summary>
+<details class="accordion" id="cost-details"><summary><span>API利用料（月約3万円）の算定条件とトークンの内訳</span><span class="detail-symbol" aria-hidden="true"></span></summary>
 <div class="accordion-body"><p>Anthropic APIで、解析処理：Sonnet 5、照合処理：Opus 5、実行管理：Fable 5.1を使う条件です。1件分には処理中の呼び出しを含めます。Codexの料金は別に計算します。</p>
 <div class="token-cards"><article><p>解析処理 / Sonnet 5</p><h4>12,000円</h4><dl>
 <div><dt>1件の入力 / 出力</dt><dd>20万 / 4万トークン</dd></div>
@@ -468,7 +467,7 @@
 <details class="accordion" id="people"><summary><span>外注と社内AI処理の役割分担</span><span class="detail-symbol" aria-hidden="true"></span></summary>
 <div class="accordion-body">
 <div class="policy-grid"><article>
-<h3>人に外注する場合</h3><p>外注担当者が計算、比較、報告を行います。社内では依頼条件を整理し、報告を受け入れ、試験の判断を行います。機密は外注先との契約やNDAで取り決めます。</p></article>
+<h3>テストを外注した場合</h3><p>外注担当者が計算、比較、報告を行います。社内では依頼条件を整理し、報告を受け入れ、試験の判断を行います。機密は外注先との契約やNDAで取り決めます。</p></article>
 <article>
 <h3>社内でAI処理を使う場合</h3><p>解析処理、照合処理、実行管理が処理を分担します。試験担当者はチェックリストの作成、確認項目の判断、試験条件の選択、装置の操作を行います。費用はAPI利用料と社内工数です。機密は提供会社との契約と社内の権限管理で扱います。</p></article>
 </div>
