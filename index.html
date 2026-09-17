@@ -1,12 +1,12 @@
 <!doctype html>
-<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>sample | 研究開発・AIシステム設計</title><meta name="description" content="装置制御、試験データ解析、AIを用いた開発を組み合わせ、研究開発と業務改善を支援します。システム構成、実行権限、停止条件、監視画面、3Dモデル・構造図を、低温通電試験の例題で示します。"><meta name="theme-color" content="#123a3d"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23123a3d'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-size='48' fill='white' font-family='Arial'%3Es%3C/text%3E%3C/svg%3E"><link rel="preload" href="assets/NotoSansJP.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="onepage.css"><script src="assets/monitor-data.js" defer></script><script src="onepage.js" defer></script><link href="https://koolish777.github.io/rd-ai-portfolio/" rel="canonical"/><meta content="website" property="og:type"/><meta content="ja_JP" property="og:locale"/><meta content="sample | 研究開発・AIシステム設計" property="og:title"/><meta content="装置制御、試験データ解析、AIを用いた開発を組み合わせた研究開発・業務改善の技術サンプル。" property="og:description"/><meta content="https://koolish777.github.io/rd-ai-portfolio/" property="og:url"/><meta content="https://koolish777.github.io/rd-ai-portfolio/assets/researcher-cleanroom.png" property="og:image"/><meta content="summary_large_image" name="twitter:card"/></head>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>sample | 研究開発・AIシステム設計</title><meta name="description" content="AIハーネスと3D CADによるメカ設計を研究開発につなぐポートフォリオ。比較試験、異常の通知、3案の工程・期待値・工数の比較、結果から次の試験までを示します。"><meta name="theme-color" content="#123a3d"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23123a3d'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-size='48' fill='white' font-family='Arial'%3Es%3C/text%3E%3C/svg%3E"><link rel="preload" href="assets/NotoSansJP.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="onepage.css"><script src="assets/monitor-data.js" defer></script><script src="onepage.js" defer></script><link href="https://koolish777.github.io/rd-ai-portfolio/" rel="canonical"/><meta content="website" property="og:type"/><meta content="ja_JP" property="og:locale"/><meta content="sample | 研究開発・AIシステム設計" property="og:title"/><meta content="AIとメカ設計を研究工程につなぎ、担当者とペアで実験・解析・改善を進める環境の設計例。" property="og:description"/><meta content="https://koolish777.github.io/rd-ai-portfolio/" property="og:url"/><meta content="https://koolish777.github.io/rd-ai-portfolio/assets/researcher-cleanroom.png" property="og:image"/><meta content="summary_large_image" name="twitter:card"/></head>
 <body id="top"><a class="skip" href="#main">本文へ移動</a>
 <header class="header"><div class="header-inner"><a class="brand" href="#top" aria-label="sample ページの先頭へ">sample<span>AI × 研究開発</span></a><button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">メニューを開く <span aria-hidden="true">☰</span></button><nav id="main-nav" aria-label="ページ内メニュー"><a href="#architecture">システム構成</a><a href="#keys">実行権限</a><a href="#rules">停止条件</a><a href="#dashboard">監視画面</a><a href="#example">試験事例</a><a href="#design">3Dモデル・構造図</a><a href="#workload">作業時間・費用</a><a href="#enterprise">データ管理</a><a class="nav-action" href="#monitor">モニターを操作する <span aria-hidden="true">↓</span></a></nav></div></header>
 <main id="main">
 
 <section class="hero">
 <div class="wrap hero-grid">
-<div class="hero-copy"><p class="eyebrow"><span class="dot"></span> PERSONAL PORTFOLIO / R&amp;D</p><h1>研究開発・<br><em>AIシステム設計</em></h1><p class="hero-lead">装置制御、試験データ解析、AIを用いた開発を組み合わせ、<br>研究開発と業務改善を支援します。</p><p class="hero-person">担当領域：制御設計、データ処理、試験の自動化、<br class="desktop-br">解析結果の可視化、装置の3Dモデル・図面</p>
+<div class="hero-copy"><p class="eyebrow"><span class="dot"></span> PERSONAL PORTFOLIO / R&amp;D</p><h1>研究開発・<br><em>AIシステム設計</em></h1><p class="hero-lead">AIと計算プログラムを研究開発の工程につなぎ、<br>試験担当者とペアで、実験・解析・改善を進める環境を設計します。</p><p class="hero-person">担当領域：制御設計、データ処理、試験の自動化、<br class="desktop-br">解析結果の可視化、装置の3Dモデル・図面</p>
 <div class="actions"><a class="button primary" href="#architecture">システム構成を見る <span aria-hidden="true">↓</span></a><a class="button quiet" href="#example">試験事例を開く <span aria-hidden="true">↓</span></a></div>
 </div>
 <figure class="hero-visual"><img src="assets/researcher-cleanroom.png" alt="クリーンスーツを着た研究者が、モニターの温度と電圧波形を確認しながら試験装置を調整している画像" fetchpriority="high">
@@ -23,16 +23,26 @@
 <div class="section-heading">
 <div><p class="eyebrow">01 / SCOPE</p>
 <h2>対応領域</h2></div>
-<p>依頼できる作業と成果物です。<br class="desktop-br">低温通電試験の例題で、各項目の実装内容を示します。</p></div>
+<p>AI処理基盤と3D CADによるメカ設計を組み合わせます。<br class="desktop-br">試験の準備から、異常の比較、担当者への提案、次の試験までをつなぎます。</p></div>
 <div class="capabilities">
 <a class="capability" href="#architecture"><span class="cap-number">01 <span aria-hidden="true">↘</span></span><svg viewBox="0 0 64 52" aria-hidden="true"><rect x="24" y="3" width="16" height="12" rx="2"/><path d="M32 15v12M12 36V27h40v9M32 27v9"/><rect x="4" y="36" width="16" height="12" rx="2"/><rect x="24" y="36" width="16" height="12" rx="2"/><rect x="44" y="36" width="16" height="12" rx="2"/></svg>
-<h3>AI処理基盤の設計</h3><p>実行管理、解析、照合の処理を分け、処理の間で渡すデータの項目を定めます。成果物は構成図、データ定義、実行スクリプトです。</p><span class="card-link">システム構成へ <span aria-hidden="true">↓</span></span></a>
+<h3>AI処理基盤の設計</h3><p>実行管理、解析、照合を分担するAIハーネスを設計します。試験条件と途中結果を引き継ぎ、比較・再計算・報告をつなぎます。</p><span class="card-link">システム構成へ <span aria-hidden="true">↓</span></span></a>
 <a class="capability" href="#keys"><span class="cap-number">02 <span aria-hidden="true">↘</span></span><svg viewBox="0 0 64 52" aria-hidden="true"><circle cx="20" cy="26" r="11"/><circle cx="20" cy="26" r="3"/><path d="M31 26h28M50 26v9M58 26v7"/></svg>
 <h3>実行権限・停止条件</h3><p>試験担当者が実行権限を発行し、処理ごとの再計算回数と停止条件を設定します。成果物は権限の記録台帳と条件表です。</p><span class="card-link">実行権限へ <span aria-hidden="true">↓</span></span></a>
 <a class="capability" href="#dashboard"><span class="cap-number">03 <span aria-hidden="true">↘</span></span><svg viewBox="0 0 64 52" aria-hidden="true"><rect x="5" y="4" width="54" height="34" rx="3"/><path d="M24 48h16M32 38v10"/><circle cx="18" cy="21" r="5"/><circle cx="32" cy="21" r="5"/><circle cx="46" cy="21" r="5"/></svg>
-<h3>監視画面</h3><p>各処理の状態を緑・黄・赤で表示し、停止時に再実行、点検、設定の組み直しを選べる画面を作ります。成果物は監視画面と自動点検処理です。</p><span class="card-link">監視画面へ <span aria-hidden="true">↓</span></span></a>
+<h3>監視画面</h3><p>処理状態と異常の通知を表示します。担当者が提案・必要工程・期待値・工数を比較し、次の試験を選べる画面を作ります。</p><span class="card-link">監視画面へ <span aria-hidden="true">↓</span></span></a>
 <a class="capability" href="#design"><span class="cap-number">04 <span aria-hidden="true">↘</span></span><svg viewBox="0 0 64 52" aria-hidden="true"><path d="M32 3L7 16v25l25 9 25-9V16L32 3ZM7 16l25 12 25-12M32 28v22M19 10l25 12v24"/></svg>
-<h3>3Dモデル・構造図</h3><p>装置の3Dモデル、組立図、部品図を作成します。SolidWorksでの部品、アセンブリ、図面の作成に対応します。</p><span class="card-link">3Dモデル・構造図へ <span aria-hidden="true">↓</span></span></a></div>
+<h3>3Dモデル・構造図</h3><p>装置、治具、配線やプローブの固定方法を3D CADで検討します。SolidWorksによる部品・アセンブリ・図面の作成に対応します。</p><span class="card-link">3Dモデル・構造図へ <span aria-hidden="true">↓</span></span></a></div>
+
+<div class="research-route-heading"><h3>設計から次の試験まで</h3><p>AIが比較材料を用意し、担当者が選び、結果を次の検討へ返します。</p></div>
+<ol class="research-route" aria-label="研究開発の流れ">
+<li><a href="#architecture"><span>01</span><b>構成・メカ設計</b><small>AIの役割と試験装置を設計</small></a></li>
+<li><a href="#example"><span>02</span><b>比較試験</b><small>条件と波形をそろえて比較</small></a></li>
+<li><a href="#research-loop"><span>03</span><b>検出・通知</b><small>専用Hookで担当者へ通知</small></a></li>
+<li><a href="#research-loop"><span>04</span><b>3案の比較</b><small>工程・期待値・工数から選択</small></a></li>
+<li><a href="#research-loop"><span>05</span><b>実施・結果返却</b><small>前回との差と期待値を照合</small></a></li>
+<li><a href="#research-loop"><span>06</span><b>次の試験</b><small>結果と残る課題を引き継ぐ</small></a></li>
+</ol>
 </div>
 </section>
 
@@ -44,9 +54,9 @@
 <p>実行管理が試験ごとの処理を装置に割り当て、装置ごとに解析、照合、再計算を行います。<br class="desktop-br">試験担当者は実行権限を発行し、照合済みの結果を確認して次の試験条件を選びます。</p></div>
 
 <div class="layers">
-<div class="layer human"><span class="layer-tag">担当者</span><div class="layer-box"><strong>試験担当者</strong><p>実行権限を発行します。試験の条件を決め、照合済みの結果を確認し、装置に送る設定値を承認します。</p></div></div>
+<div class="layer human"><span class="layer-tag">担当者</span><div class="layer-box"><strong>試験担当者</strong><p>実行権限を発行し、試験条件を決めます。提案・必要工程・期待値・工数を比べて実施する案を選び、装置に設定値を送ります。</p></div></div>
 <div class="layer-link" aria-hidden="true"><span>依頼票と実行権限（1回分）</span></div>
-<div class="layer macro"><span class="layer-tag">システム全体の管理</span><div class="layer-box"><strong>実行管理 <small>AI：Fable 5.1 / GPT-6 Astra</small></strong><p>依頼を装置ごとの処理に分け、再計算の回数を数え、結果を集めて報告します。原因候補と切り分け試験の条件を一覧にします。</p></div></div>
+<div class="layer macro"><span class="layer-tag">システム全体の管理</span><div class="layer-box"><strong>実行管理 <small>AI：Fable 5.1 / GPT-6 Astra</small></strong><p>依頼を装置ごとの処理に分け、途中結果と残る課題を引き継ぎます。解析・照合の結果から比較試験の案をまとめ、担当者の選択と実施結果を次の作業票へ返します。</p></div></div>
 <div class="layer-link" aria-hidden="true"><span>作業票（原記録の保存先、計算式の版、出力形式）</span></div>
 <div class="layer micro"><span class="layer-tag">機能別の処理構成（装置ごと）</span>
 <div class="micro-grid">
@@ -61,7 +71,7 @@
 <p class="micro-out">出力：照合済みの集計値、不合格の残り、担当者が確認する項目</p></article>
 </div></div>
 <div class="layer-link" aria-hidden="true"><span>全処理の実行記録</span></div>
-<div class="layer watch"><span class="layer-tag">監視</span><div class="layer-box"><strong>監視画面・実行記録</strong><p>再計算回数、不合格数、実行権限の状態をランプで表示します。発行、使用、失効の時刻と処理内容を実行記録に保存します。<a href="#dashboard">監視画面へ ↓</a></p></div></div>
+<div class="layer watch"><span class="layer-tag">監視</span><div class="layer-box"><strong>監視画面・実行記録</strong><p>再計算回数、不合格数、実行権限を表示します。専用Hookが異常区間と比較結果を担当者の確認欄へ送り、試験案の選択と結果の返却をつなぎます。<a href="#dashboard">監視画面へ ↓</a></p></div></div>
 </div>
 <p class="harness-note">利用モデルの例：Claude Code / Codex。装置が変わっても同じ構成で設計します。</p>
 
@@ -119,7 +129,7 @@
 <article><span>C3</span><b>解析処理 → 照合処理</b><p>集計値と原記録の保存先を渡し、照合処理が独立して確認します。</p></article>
 <article><span>C4</span><b>照合処理 → 実行管理</b><p>チェック項目ごとの合格・不合格と、根拠になった原記録の行を渡します。</p></article>
 <article><span>C5</span><b>実行管理 → 再計算処理</b><p>不合格の項目、根拠、修正内容を渡します。</p></article>
-<article><span>C6</span><b>実行管理 → 試験担当者</b><p>報告を渡します。照合済みの集計値、不合格の残り、担当者が確認する項目を含みます。</p></article>
+<article><span>C6</span><b>実行管理 → 試験担当者</b><p>専用Hookで確認依頼を渡します。異常区間・比較結果・試験番号を通知し、提案・必要工程・期待値・工数を画面にまとめます。</p></article>
 <article><span>C7</span><b>全処理 → 監視画面</b><p>再計算回数、不合格数、実行権限の状態、API利用量を送ります。ランプ表示の元になります。</p></article>
 </div>
 
@@ -215,7 +225,7 @@
 <div class="section-heading">
 <div><p class="eyebrow">06 / MONITORING</p>
 <h2>監視画面</h2></div>
-<p>各処理の状態を緑・黄・赤で表示します。<br class="desktop-br">赤のときは、再実行、点検、設定の組み直しのどれを行うかを画面で選びます。</p></div>
+<p>各処理の状態と、担当者が対応する項目を表示します。<br class="desktop-br">処理の停止・再開を管理し、下の試験事例で、異常の通知から比較試験の選択までを示します。</p></div>
 
 <div class="dash-shell">
 <div class="dash-top"><div><small>MONITOR</small><h4>案件 J-0917 / 低温通電試験</h4></div>
@@ -262,7 +272,7 @@
 <div class="case-intro">
 <figure><img src="assets/tester-monitor.png" alt="低温通電試験の装置構成。チャンバー、プローブ、顕微鏡、計測器、付属モニターを備えた研究用ベンチの3Dモデル" loading="lazy"><figcaption>低温通電試験の装置構成（3Dモデル）</figcaption></figure>
 <div class="case-copy"><span class="pill">試験条件</span>
-<h3>2ミリ秒の電圧低下の検出</h3><p>温度が安定した区間で、電圧が2ミリ秒だけ下がります。解析処理が原波形の全点から低下区間を抽出し、照合処理が原波形と突き合わせます。原因候補（接触、電源、温度、弁の動作）ごとに切り分け試験の条件を一覧にし、試験担当者が次の試験を選びます。</p>
+<h3>2ミリ秒の電圧低下の検出</h3><p>温度が安定した区間で、電圧が2ミリ秒だけ下がります。解析処理が原波形の全点から低下区間を抽出し、照合処理が原波形と突き合わせます。専用Hookが比較結果を担当者へ通知し、接触・駆動・電源を調べる3案を画面に提示します。工程・期待値・工数を比べて選び、再試験の結果を次の検討へ返します。</p>
 <div class="case-facts">
 <div><b>−80<span>°C</span></b><small>チャック温度（設計目標）</small></div>
 <div><b>10<span>kHz</span></b><small>波形の取得条件</small></div>
@@ -292,7 +302,7 @@
 <div class="monitor-heading" id="monitor">
 <div><p class="eyebrow">INTERACTIVE / 操作できます</p>
 <h3>試験担当者のモニター画面</h3></div>
-<p>試験を選ぶ → 波形を拡大する → 確認項目を読む</p></div>
+<p>波形の比較 → Hook通知 → 3案の選択 → 結果と次の試験</p></div>
 
 <div class="monitor-shell">
 <div class="monitor-top">
@@ -316,7 +326,7 @@
 <svg id="wave" class="wave-svg" role="img" aria-label="選択した試験の時間と電圧の波形"></svg>
 <div class="chart-legend"><span>電圧（V）</span><span>弁切替イベント</span></div>
 </div>
-<aside class="inspector" aria-live="polite"><span class="eyebrow">確認項目</span><h4 id="finding"></h4><p id="finding-detail"></p><b>次に確認すること</b><p id="next-check"></p></aside></div>
+<aside class="inspector" aria-live="polite"><span class="eyebrow">確認項目</span><h4 id="finding"></h4><p id="finding-detail"></p><b>次に確認すること</b><p id="next-check"></p><a class="inspect-next" href="#research-loop">比較検討の画面へ ↓</a></aside></div>
 <p class="monitor-bottom" id="data-summary"></p>
 <details class="measurement-details"><summary>測定値の表を開く</summary><p id="sample-caption"></p>
 <div class="sample-table">
@@ -325,7 +335,30 @@
 </details>
 </div>
 </div>
-<div class="research-judgment"><span>試験担当者の操作</span><p>試験の目的を決め、現物を確認し、次の試験条件を選びます。集計と照合はAI処理が行います。</p></div>
+
+<section class="research-loop" id="research-loop" aria-labelledby="research-loop-title">
+<div class="review-heading"><div><p class="eyebrow">RESEARCH PARTNER</p><h4 id="research-loop-title">比較検討と次の試験</h4></div><span class="review-mode">操作例</span></div>
+<p class="review-intro">上の試験データから専用Hookが確認依頼を作り、担当者の画面へ通知します。期待値・工数は試算、再試験の結果例は合成データです。</p>
+<div class="review-examples" role="group" aria-label="比較検討の例"><button data-review-run="N006" aria-pressed="true">2 msの電圧低下</button><button data-review-run="N005" aria-pressed="false">連続ノイズ</button></div>
+<div class="hook-notice" role="status"><span id="hook-state" class="hook-state"></span><div><b id="hook-title"></b><p id="hook-detail"></p><small id="hook-evidence"></small></div></div>
+<div id="review-options">
+<p class="review-shared">共通条件：取得10 kHz・900〜902秒・20,000点。提案ごとに変更する条件を一つに絞り、温度設定・圧力設定・比較区間をそろえます。</p>
+<div class="proposal-table-wrap"><table class="proposal-table"><caption>担当者が比較する3案</caption><thead><tr><th scope="col">提案・比較の目的</th><th scope="col">必要工程</th><th scope="col">期待値（仮説）</th><th scope="col">担当者工数<br>H・試算</th><th scope="col">選択</th></tr></thead><tbody id="proposal-rows"></tbody></table></div>
+<p class="review-hours">工数は準備・条件変更・取得操作・結果確認の合計です。装置の冷却・保持の待ち時間は別に管理します。</p>
+<div id="review-plan" class="review-plan" hidden>
+<h5 id="plan-title"></h5><p id="plan-condition"></p><ol id="plan-steps"></ol><p id="plan-hours"></p><p id="plan-mechanical" hidden><a href="#design">固定方法を3Dモデル・図面で検討する ↓</a></p>
+<button id="show-trial-result" class="review-action">再試験の結果例を表示する</button>
+</div>
+<div id="review-result" class="review-result" hidden>
+<div class="result-heading"><h5>再試験の結果比較</h5><span>合成データによる結果例</span></div>
+<div class="result-metrics"><div><small>変更前</small><strong id="result-before"></strong></div><div><small>期待値（仮説）</small><strong id="result-target"></strong></div><div><small>再試験の結果例</small><strong id="result-after"></strong></div></div>
+<p id="result-assessment"></p><p id="result-next"></p><button id="create-next-trial" class="review-action">結果を引き継いで次の試験へ</button>
+</div>
+<div id="next-trial" class="next-trial" hidden tabindex="-1"><span class="pill">次の試験票</span><h5 id="next-trial-title"></h5><dl id="next-trial-fields"></dl></div>
+<details class="review-record"><summary>担当者とのやり取りを開く</summary><ol id="review-log"></ol></details>
+</div>
+</section>
+<div class="research-judgment"><span>担当者とAIの分担</span><p>AIとプログラムが異常の抽出、比較材料の作成、結果の照合を進めます。担当者が現物と提案を確認して試験を行い、返した結果から次の条件を一緒に検討します。</p></div>
 </div>
 </section>
 
@@ -334,7 +367,7 @@
 <div class="section-heading">
 <div><p class="eyebrow">08 / 3D MODEL &amp; DRAWING</p>
 <h2>3Dモデル・構造図</h2></div>
-<p>例題の装置を3Dモデルと図面で示します。<br class="desktop-br">装置の全体、内部の構成、組立図、部品図を切り替えて表示します。</p></div>
+<p>比較試験で固定方法や配線経路を見直すときは、メカ設計へつなぎます。<br class="desktop-br">3Dで部品の配置を検討し、組立図・部品図に落として、変更後の試験条件へ返します。</p></div>
 <div class="design-layout">
 <div class="design-gallery">
 <div class="gallery-tabs" role="group" aria-label="表示する図"><button data-view="station" aria-pressed="true">装置の全体</button><button data-view="cad" aria-pressed="false">CAD表示</button><button data-view="inside" aria-pressed="false">内部の構成</button><button data-view="assembly" aria-pressed="false">組立図</button><button data-view="plate" aria-pressed="false">部品図</button></div>
@@ -344,7 +377,7 @@
 <div class="design-copy"><span class="pill">3D CAD / DRAWING</span>
 <h3>対応する作業</h3>
 <ul class="design-points"><li><b>3Dモデル</b><p>装置の構想モデルをBlenderで作成します。ここではレンダリング画像と図面を掲載しています。.blend / .glb形式での受け渡しにも対応します。</p></li><li><b>組立図・部品図</b><p>正面、平面、立体の三面図と、穴位置、穴径、板厚を示す部品図を作成します。</p></li><li><b>SolidWorks</b><p>部品、アセンブリ、図面を作成します。業務用のアカウントと作業環境は依頼元で用意する形です。</p></li></ul>
-<p class="note">表示は例題の構想設計です。</p></div>
+<p class="note">表示は例題の構想設計です。試験で使った図面の版と変更箇所を、比較結果と一緒に次の作業票へ引き継ぎます。</p><p class="design-return"><a href="#research-loop">比較検討と次の試験へ戻る ↑</a></p></div>
 </div>
 </div>
 </section>
@@ -354,7 +387,8 @@
 <div class="section-heading">
 <div><p class="eyebrow">09 / TIME &amp; COST</p>
 <h2>作業時間・費用</h2></div>
-<p>低温通電試験の5項目を月20日行う条件で、<br class="desktop-br">人に外注する場合と社内でAI処理を使う場合の費用を試算します。</p></div>
+<p>上の提案表では、試験ごとの準備・条件変更・取得操作・結果確認を工数で比べます。<br class="desktop-br">ここでは日々の整理・解析・提案・報告を月20日続ける条件で、費用を試算します。</p></div>
+<p class="workload-connection">AIがデータ整理、比較表、再計算、次の試験票を用意し、担当者は条件の選択と装置の調整に時間を使います。途中結果・選んだ理由・残る課題を引き継ぎ、長期の実験やデバッグを続けます。</p>
 <div class="workload-label"><strong>5項目 / 日 × 20日 = 月100件（試算の条件）</strong><span>温度の整理、波形の解析、原因候補の比較、再試験条件の作成、日次報告</span></div>
 <div class="cost-comparison"><article class="cost-card human-cost"><p>人に外注する場合（試算）</p>
 <div class="cost-number">320<span>万円</span></div>
